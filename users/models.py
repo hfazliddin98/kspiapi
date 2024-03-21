@@ -1,0 +1,20 @@
+from django.db import models
+
+class Yangilik(models.Model):
+    rasm_0 = models.ImageField(upload_to='yangilik/')
+    rasm_1 = models.ImageField(upload_to='yangilik/')
+    rasm_2 = models.ImageField(upload_to='yangilik/')
+    rasm_3 = models.ImageField(upload_to='yangilik/')
+    rasm_4 = models.ImageField(upload_to='yangilik/')
+    title  = models.CharField(max_lenght=500)
+    subtitle  = models.CharField(max_lenght=500, blank=True)
+    body_0 = models.TextField()
+    body_1 = models.TextField(blank=True)
+    body_2 = models.TextField(blank=True)
+    body_3 = models.TextField(blank=True)
+    body_4 = models.TextField(blank=True)
+    body_5 = models.TextField(blank=True)
+    body_6 = models.TextField(blank=True)
+    body_7 = models.TextField(blank=True)
+    body_8 = models.TextField(blank=True)
+    body_9 = models.TextField(blank=True)
