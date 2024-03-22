@@ -1,11 +1,26 @@
 from django.db import models
 
+UZ = 'uz'
+RU = 'ru'
+EN = 'en'
+
+til_choices = {
+    UZ : UZ,
+    RU : RU,
+    EN : EN
+}
+
+
+class Til(models.Model):
+    name = models.CharField(max_length=5, choices = til_choices)
+
 class Yangilik(models.Model):
+    til = models.OneToOneField(Til, on_delete=models.CASCADE)
     rasm_0 = models.ImageField(upload_to='yangilik/')
-    rasm_1 = models.ImageField(upload_to='yangilik/')
-    rasm_2 = models.ImageField(upload_to='yangilik/')
-    rasm_3 = models.ImageField(upload_to='yangilik/')
-    rasm_4 = models.ImageField(upload_to='yangilik/')
+    rasm_1 = models.ImageField(upload_to='yangilik/', blank=True)
+    rasm_2 = models.ImageField(upload_to='yangilik/', blank=True)
+    rasm_3 = models.ImageField(upload_to='yangilik/', blank=True)
+    rasm_4 = models.ImageField(upload_to='yangilik/', blank=True)
     title  = models.CharField(max_length=500)
     subtitle  = models.CharField(max_length=500, blank=True)
     body_0 = models.TextField()
