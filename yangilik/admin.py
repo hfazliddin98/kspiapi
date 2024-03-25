@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Yangilik
+from .models import Yangilik, Elon
 
-admin.site.register([Yangilik])
+admin.site.register([Yangilik, Elon])
