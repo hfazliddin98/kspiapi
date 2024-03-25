@@ -30,9 +30,7 @@ INSTALLED_APPS = [
 
     # apps
     'rest_framework',
-    'rest_framework.authtoken',
     'drf_yasg',
-    'dj_rest_auth',
     'corsheaders',
 
     # men qoshgan applar

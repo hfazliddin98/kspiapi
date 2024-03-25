@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import YangilikView, SinovView, MalumotView
+from .views import YangilikView, ElonView
 
 urlpatterns = [
-    path('', YangilikView.as_view()),
-    path('sinov/', SinovView.as_view()),
-    path('malumot/', MalumotView.as_view()),
+    path('yangilik/', YangilikView.as_view()),
+    path('elon/', ElonView.as_view()),
+
 ]

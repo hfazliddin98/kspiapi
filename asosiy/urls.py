@@ -26,17 +26,10 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('haker/', admin.site.urls),
     path('', home, name='home'),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', TokenObtainPairView.as_view(), name='token'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('yangilik/', include('yangilik.urls')),
-    # path('api/v1/taklif/', include('taklif.urls')),
-    # path('api/v1/statistika/', include('statistika.urls')),
-    # path('api/v1/users/', include('users.urls')),
-    # path('api/v1/davomat/', include('davomat.urls')),
-
-    # registiratsiya
-   #  path('api-auth/', include('rest_framework.urls')),
-   #  path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),
+  
 
     # swagger
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

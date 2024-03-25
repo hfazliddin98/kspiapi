@@ -1,6 +1,6 @@
 from rest_framework.generics import ListCreateAPIView
-from .models import Yangilik, Sinov, Malumot
-from .serialazer import YangilikSerializer, SinovSerializer, MalumotSerializer
+from .models import Yangilik, Elon
+from .serialazer import YangilikSerializer, ElonSerializer
 
 
 
@@ -9,13 +9,9 @@ class YangilikView(ListCreateAPIView):
     serializer_class = YangilikSerializer
     queryset = Yangilik.objects.all()
 
-class SinovView(ListCreateAPIView):
-    metadata_class = Sinov
-    serializer_class = SinovSerializer
-    queryset = Sinov.objects.all()
 
+class ElonView(ListCreateAPIView):
+    metadata_class = Elon
+    serializer_class = ElonSerializer
+    queryset = Elon.objects.all()
 
-class MalumotView(ListCreateAPIView):
-    metadata_class = Malumot
-    serializer_class = MalumotSerializer
-    queryset = Malumot.objects.all()

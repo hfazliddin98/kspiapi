@@ -1,22 +1,17 @@
 from rest_framework import serializers
-from .models import Yangilik, Sinov, Malumot
+from .models import Yangilik, Elon
 
 class YangilikSerializer(serializers.ModelSerializer):
     class Meta:
         model = Yangilik
         fields = '__all__'
-        depth = 1
-        
-class SinovSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Sinov
-        fields = '__all__'
-        depth = 1
+        depth = 3
 
 
-class MalumotSerializer(serializers.ModelSerializer):
+
+class ElonSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Malumot
+        model = Elon
         fields = '__all__'
         depth = 3
 
