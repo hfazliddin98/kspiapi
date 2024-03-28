@@ -1,4 +1,4 @@
 from django.shortcuts import render, redirect
 
-def home(request):
+def bosh_sahifa(request):
     return redirect('/swagger/')

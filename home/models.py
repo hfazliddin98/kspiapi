@@ -2,11 +2,11 @@ from django.db import models
 
 
 class Yangilik(models.Model):
-    rasm_0 = models.ImageField(upload_to='yangilik/')
-    rasm_1 = models.ImageField(upload_to='yangilik/', blank=True)
-    rasm_2 = models.ImageField(upload_to='yangilik/', blank=True)
-    rasm_3 = models.ImageField(upload_to='yangilik/', blank=True)
-    rasm_4 = models.ImageField(upload_to='yangilik/', blank=True)
+    rasm_1 = models.ImageField(upload_to='yangilik/')   
+    rasm_2 = models.ImageField(upload_to='yangilik/')   
+    rasm_3 = models.ImageField(upload_to='yangilik/')   
+    rasm_4 = models.ImageField(upload_to='yangilik/')   
+    rasm_5 = models.ImageField(upload_to='yangilik/')   
     title_uz  = models.CharField(max_length=500)
     title_ru  = models.CharField(max_length=500)
     title_en  = models.CharField(max_length=500)
@@ -55,6 +55,14 @@ class Elon(models.Model):
     field = models.TextField()
     adress  = models.CharField(max_length=500)
     sana = models.DateTimeField(auto_now_add=True)
+
+
+class GalareyaTuri(models.Model):
+    tur = models.CharField(max_length=500)
+
+class Galareya(models.Model):
+    tur_id = models.ForeignKey(GalareyaTuri, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='galareya/')
 
 
     

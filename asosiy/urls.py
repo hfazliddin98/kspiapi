@@ -6,7 +6,7 @@ from rest_framework import permissions
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from users.views import home
+from users.views import bosh_sahifa
 
 
 
@@ -25,10 +25,10 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('haker/', admin.site.urls),
-    path('', home, name='home'),
+    path('', bosh_sahifa, name='bosh_sahifa'),
     path('api/token/', TokenObtainPairView.as_view(), name='token'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('yangilik/', include('yangilik.urls')),
+    path('home/', include('home.urls')),
   
 
     # swagger

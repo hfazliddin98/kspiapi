@@ -35,7 +35,7 @@ INSTALLED_APPS = [
 
     # men qoshgan applar
     'users',
-    'yangilik',
+    'home',
 ]
 
 MIDDLEWARE = [

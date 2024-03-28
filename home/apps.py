@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class YangilikConfig(AppConfig):
+class HomeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'yangilik'
+    name = 'home'
