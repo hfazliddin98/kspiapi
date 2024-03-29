@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import YangilikListAPIView, YangilikCreateAPIView, YangilikUpdateAPIView, YangilikDestroyAPIView
+from .views import YangilikListAPIView, YangilikCreateAPIView, YangilikDestroyAPIView, YangilikRetrieveUpdateDestroyAPIView
 from .views import ElonListAPIView, ElonCreateAPIView, ElonUpdateAPIView, ElonDestroyAPIView
 from .views import GalareyaTuriListAPIView, GalareyaTuriCreateAPIView, GalareyaTuriUpdateAPIView, GalareyaTuriDestroyAPIView
 from .views import GalareyaListAPIView, GalareyaCreateAPIView, GalareyaUpdateAPIView, GalareyaDestroyAPIView
@@ -7,8 +7,9 @@ from .views import GalareyaListAPIView, GalareyaCreateAPIView, GalareyaUpdateAPI
 urlpatterns = [
     path('yangilik/get/', YangilikListAPIView.as_view()),
     path('yangilik/post/', YangilikCreateAPIView.as_view()),
-    path('yangilik/update/<int:pk>/', YangilikUpdateAPIView.as_view()),
-    path('yangilik/delete/<int:pk>/', YangilikDestroyAPIView.as_view()),
+    # path('yangilik/update/<int:pk>/', YangilikUpdateAPIView.as_view()),
+    path('yangilik/<int:pk>/', YangilikRetrieveUpdateDestroyAPIView.as_view()),
+    # path('yangilik/delete/<int:pk>/', YangilikDestroyAPIView.as_view()),
 
     # elon uchun
     path('elon/get/', ElonListAPIView.as_view()),

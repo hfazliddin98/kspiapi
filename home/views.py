@@ -1,5 +1,5 @@
 from rest_framework.permissions import AllowAny
-from rest_framework.generics import ListCreateAPIView, ListAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
 from .models import Yangilik, Elon, GalareyaTuri, Galareya
 from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer
 
@@ -17,7 +17,7 @@ class YangilikCreateAPIView(CreateAPIView):
     serializer_class = YangilikSerializer
     queryset = Yangilik.objects.all()
 
-class YangilikUpdateAPIView(UpdateAPIView):
+class YangilikRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     metadata_class = Yangilik
     serializer_class = YangilikSerializer
     queryset = Yangilik.objects.all()
