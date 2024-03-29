@@ -1,5 +1,5 @@
 from rest_framework.permissions import AllowAny
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView
 from .models import Yangilik, Elon, GalareyaTuri, Galareya
 from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer
 
@@ -23,12 +23,6 @@ class YangilikRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Yangilik.objects.all()
 
 
-class YangilikDestroyAPIView(DestroyAPIView):
-    metadata_class = Yangilik
-    serializer_class = YangilikSerializer
-    queryset = Yangilik.objects.all()
-
-
 # elon 
     
 class ElonListAPIView(ListAPIView):
@@ -43,13 +37,7 @@ class ElonCreateAPIView(CreateAPIView):
     serializer_class = ElonSerializer
     queryset = Elon.objects.all()
 
-class ElonUpdateAPIView(UpdateAPIView):
-    metadata_class = Elon
-    serializer_class = ElonSerializer
-    queryset = Elon.objects.all()
-
-
-class ElonDestroyAPIView(DestroyAPIView):
+class ElonRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     metadata_class = Elon
     serializer_class = ElonSerializer
     queryset = Elon.objects.all()
@@ -69,17 +57,10 @@ class GalareyaTuriCreateAPIView(CreateAPIView):
     serializer_class = GalareyaTuriSerializer
     queryset = GalareyaTuri.objects.all()
 
-class GalareyaTuriUpdateAPIView(UpdateAPIView):
+class GalareyaTuriRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     metadata_class = GalareyaTuri
     serializer_class = GalareyaTuriSerializer
     queryset = GalareyaTuri.objects.all()
-
-
-class GalareyaTuriDestroyAPIView(DestroyAPIView):
-    metadata_class = GalareyaTuri
-    serializer_class = GalareyaTuriSerializer
-    queryset = GalareyaTuri.objects.all()
-
 
 # galareya
 
@@ -95,13 +76,10 @@ class GalareyaCreateAPIView(CreateAPIView):
     serializer_class = GalareyaSerializer
     queryset = Galareya.objects.all()
 
-class GalareyaUpdateAPIView(UpdateAPIView):
+class GalareyaRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     metadata_class = Galareya
     serializer_class = GalareyaSerializer
     queryset = Galareya.objects.all()
 
 
-class GalareyaDestroyAPIView(DestroyAPIView):
-    metadata_class = Galareya
-    serializer_class = GalareyaSerializer
-    queryset = Galareya.objects.all()
+

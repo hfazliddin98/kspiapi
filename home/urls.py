@@ -1,31 +1,27 @@
 from django.urls import path
-from .views import YangilikListAPIView, YangilikCreateAPIView, YangilikDestroyAPIView, YangilikRetrieveUpdateDestroyAPIView
-from .views import ElonListAPIView, ElonCreateAPIView, ElonUpdateAPIView, ElonDestroyAPIView
-from .views import GalareyaTuriListAPIView, GalareyaTuriCreateAPIView, GalareyaTuriUpdateAPIView, GalareyaTuriDestroyAPIView
-from .views import GalareyaListAPIView, GalareyaCreateAPIView, GalareyaUpdateAPIView, GalareyaDestroyAPIView
+from .views import YangilikListAPIView, YangilikCreateAPIView, YangilikRetrieveUpdateDestroyAPIView
+from .views import ElonListAPIView, ElonCreateAPIView, ElonRetrieveUpdateDestroyAPIView
+from .views import GalareyaTuriListAPIView, GalareyaTuriCreateAPIView, GalareyaTuriRetrieveUpdateDestroyAPIView
+from .views import GalareyaListAPIView, GalareyaCreateAPIView, GalareyaRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
     path('yangilik/', YangilikListAPIView.as_view()),
     path('yangilik/post/', YangilikCreateAPIView.as_view()),
-    # path('yangilik/update/<int:pk>/', YangilikUpdateAPIView.as_view()),
     path('yangilik/<int:pk>/', YangilikRetrieveUpdateDestroyAPIView.as_view()),
-    # path('yangilik/delete/<int:pk>/', YangilikDestroyAPIView.as_view()),
 
     # elon uchun
-    path('elon/get/', ElonListAPIView.as_view()),
+    path('elon/', ElonListAPIView.as_view()),
     path('elon/post/', ElonCreateAPIView.as_view()),
-    path('elon/update/<int:pk>/', ElonUpdateAPIView.as_view()),
-    path('elon/delete/<int:pk>/', ElonDestroyAPIView.as_view()),
+    path('elon/<int:pk>/', ElonRetrieveUpdateDestroyAPIView.as_view()),
+    
 
     #  galareya turi
-    path('galareya/tur/get/', GalareyaTuriListAPIView.as_view()),
+    path('galareya/tur/', GalareyaTuriListAPIView.as_view()),
     path('galareya/tur/post/', GalareyaTuriCreateAPIView.as_view()),
-    path('galareya/tur/update/<int:pk>/', GalareyaTuriUpdateAPIView.as_view()),
-    path('galareya/tur/delete/<int:pk>/', GalareyaTuriDestroyAPIView.as_view()),
+    path('galareya/tur/<int:pk>/', GalareyaTuriRetrieveUpdateDestroyAPIView.as_view()),
 
     # galareya
-    path('galareya/get/', GalareyaListAPIView.as_view()),
+    path('galareya/', GalareyaListAPIView.as_view()),
     path('galareya/post/', GalareyaCreateAPIView.as_view()),
-    path('galareya/update/<int:pk>/', GalareyaUpdateAPIView.as_view()),
-    path('galareya/delete/<int:pk>/', GalareyaDestroyAPIView.as_view()),
+    path('galareya/<int:pk>/', GalareyaRetrieveUpdateDestroyAPIView.as_view()),
 ]
