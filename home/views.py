@@ -17,6 +17,17 @@ class YangilikCreateAPIView(CreateAPIView):
     serializer_class = YangilikSerializer
     queryset = Yangilik.objects.all()
 
+class YangilikUpdateAPIView(UpdateAPIView):
+    metadata_class = Yangilik
+    serializer_class = YangilikSerializer
+    queryset = Yangilik.objects.all()
+
+
+class YangilikDestroyAPIView(DestroyAPIView):
+    metadata_class = Yangilik
+    serializer_class = YangilikSerializer
+    queryset = Yangilik.objects.all()
+
 
 class ElonView(ListCreateAPIView):
     metadata_class = Elon

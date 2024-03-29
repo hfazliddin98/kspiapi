@@ -85,16 +85,17 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Frontend domaingizni qo'shing
-    "http://192.168.0.29",     # Mavjud bo'lgan boshqa domaingizni qo'shing
-    "https://192.168.0.29",
+    "http://localhost:3001",  # Frontend domaingizni qo'shing
+    "http://192.168.0.5",     # Mavjud bo'lgan boshqa domaingizni qo'shing
+    "https://192.168.0.5",
     "http://192.168.0.49",     
     "https://192.168.0.49",
     "http://kengash.pythonanywhere.com",     
     "https://kengash.pythonanywhere.com",
-    "http://kengash.kspi.uz",     
-    "https://kengash.kspi.uz",
-    "http://kengash_api.kspi.uz",     
-    "https://kengash_api.kspi.uz",
+    "http://yangi.kspi.uz",     
+    "https://yangi.kspi.uz",
+    "http://kspi.uz",     
+    "https://kspi.uz",
 ]
 
 
