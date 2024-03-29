@@ -3,10 +3,10 @@ from django.db import models
 
 class Yangilik(models.Model):
     rasm_1 = models.ImageField(upload_to='yangilik/')   
-    rasm_2 = models.ImageField(upload_to='yangilik/')   
-    rasm_3 = models.ImageField(upload_to='yangilik/')   
-    rasm_4 = models.ImageField(upload_to='yangilik/')   
-    rasm_5 = models.ImageField(upload_to='yangilik/')   
+    rasm_2 = models.ImageField(upload_to='yangilik/', blank=True)   
+    rasm_3 = models.ImageField(upload_to='yangilik/', blank=True)   
+    rasm_4 = models.ImageField(upload_to='yangilik/', blank=True)   
+    rasm_5 = models.ImageField(upload_to='yangilik/', blank=True)   
     title_uz  = models.CharField(max_length=500)
     title_ru  = models.CharField(max_length=500)
     title_en  = models.CharField(max_length=500)
