@@ -6,7 +6,7 @@ from .views import GalareyaListAPIView, GalareyaCreateAPIView, GalareyaUpdateAPI
 
 urlpatterns = [
     path('yangilik/', YangilikListAPIView.as_view()),
-    path('yangilik/', YangilikCreateAPIView.as_view()),
+    path('yangilik/post/', YangilikCreateAPIView.as_view()),
     # path('yangilik/update/<int:pk>/', YangilikUpdateAPIView.as_view()),
     path('yangilik/<int:pk>/', YangilikRetrieveUpdateDestroyAPIView.as_view()),
     # path('yangilik/delete/<int:pk>/', YangilikDestroyAPIView.as_view()),
