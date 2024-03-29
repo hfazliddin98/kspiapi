@@ -5,8 +5,8 @@ from .views import GalareyaTuriListAPIView, GalareyaTuriCreateAPIView, GalareyaT
 from .views import GalareyaListAPIView, GalareyaCreateAPIView, GalareyaUpdateAPIView, GalareyaDestroyAPIView
 
 urlpatterns = [
-    path('yangilik/get/', YangilikListAPIView.as_view()),
-    path('yangilik/post/', YangilikCreateAPIView.as_view()),
+    path('yangilik/', YangilikListAPIView.as_view()),
+    path('yangilik/', YangilikCreateAPIView.as_view()),
     # path('yangilik/update/<int:pk>/', YangilikUpdateAPIView.as_view()),
     path('yangilik/<int:pk>/', YangilikRetrieveUpdateDestroyAPIView.as_view()),
     # path('yangilik/delete/<int:pk>/', YangilikDestroyAPIView.as_view()),
