@@ -152,9 +152,9 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'kengash_api',
-#         'USER': 'kengash_apiuser',
-#         'PASSWORD': 'Hfazliddin98',
+#         'NAME': 'kspi_api',
+#         'USER': 'kspi_apiuser',
+#         'PASSWORD': 'kspi@2024',
 #         'HOST': 'localhost',
 #         'PORT': '',
 #     }
