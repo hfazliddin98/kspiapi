@@ -17,8 +17,8 @@ SECRET_KEY = 'django-insecure-o=mcn5dt7zbn3lf!2serh_rnh&o@rn^)k#1x+w8&t2@5ac#jr6
 DEBUG = True
 
 ALLOWED_HOSTS = ['kspiapi.kspi.uz', '.kokanddeveloper.uz', 'localhost', '192.168.0.55','127.0.0.1']
-CSRF_TRUSTED_ORIGINS=['https://kspiapi.kokanddeveloper.uz', 'http://kspiapi.kokanddeveloper.uz', 'http://127.0.0.1']
-# CSRF_TRUSTED_ORIGINS=['https://kspiapi.kspi.uz', 'http://kspiapi.kspi.uz', 'http://127.0.0.1']
+# CSRF_TRUSTED_ORIGINS=['https://kspiapi.kokanddeveloper.uz', 'http://kspiapi.kokanddeveloper.uz', 'http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS=['https://kspiapi.kspi.uz', 'http://kspiapi.kspi.uz', 'http://127.0.0.1']
 
 # Application definition
 
