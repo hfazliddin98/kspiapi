@@ -65,6 +65,14 @@ class Galareya(models.Model):
     rasm = models.ImageField(upload_to='galareya/')
 
 
+class Fikr(models.Model):
+    rasm = models.FileField(upload_to='fikr/')
+    video = models.FileField(upload_to='fikr/')
+    text = models.CharField(max_length=200, blank=True)
+    talaba = models.CharField(max_length=200, blank=True)
+    link = models.URLField(max_length=500, blank=True)
+
+
     
 
 
