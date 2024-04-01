@@ -2,20 +2,20 @@ from django.db import models
 
 
 class Yangilik(models.Model):
-    rasm_1 = models.ImageField(upload_to='yangilik/')   
+    rasm_1 = models.ImageField(upload_to='yangilik/', blank=True)   
     rasm_2 = models.ImageField(upload_to='yangilik/', blank=True)   
     rasm_3 = models.ImageField(upload_to='yangilik/', blank=True)   
     rasm_4 = models.ImageField(upload_to='yangilik/', blank=True)   
     rasm_5 = models.ImageField(upload_to='yangilik/', blank=True)   
-    title_uz  = models.CharField(max_length=500)
-    title_ru  = models.CharField(max_length=500)
-    title_en  = models.CharField(max_length=500)
+    title_uz  = models.CharField(max_length=500, blank=True)
+    title_ru  = models.CharField(max_length=500, blank=True)
+    title_en  = models.CharField(max_length=500, blank=True)
     subtitle_uz  = models.CharField(max_length=500, blank=True)
     subtitle_ru  = models.CharField(max_length=500, blank=True)
     subtitle_en  = models.CharField(max_length=500, blank=True)
-    body_0_uz = models.TextField()
-    body_0_ru = models.TextField()
-    body_0_en = models.TextField()
+    body_0_uz = models.TextField(blank=True)
+    body_0_ru = models.TextField(blank=True)
+    body_0_en = models.TextField(blank=True)
     body_1_uz = models.TextField(blank=True)
     body_1_ru = models.TextField(blank=True)
     body_1_en = models.TextField(blank=True)
@@ -47,29 +47,43 @@ class Yangilik(models.Model):
 
 
 class Elon(models.Model):
-    rasm = models.ImageField(upload_to='elon/')
-    title  = models.CharField(max_length=1500)
-    detail = models.TextField()
-    boshlanish_vaqti = models.CharField(max_length=500)
-    tugash_vaqti = models.CharField(max_length=500)
-    field = models.TextField()
-    adress  = models.CharField(max_length=500)
+    rasm = models.ImageField(upload_to='elon/', blank=True)
+    title_uz  = models.CharField(max_length=1500, blank=True)
+    title_ru  = models.CharField(max_length=1500, blank=True)
+    title_en  = models.CharField(max_length=1500, blank=True)
+    detail_uz = models.TextField(blank=True)
+    detail_ru = models.TextField(blank=True)
+    detail_en = models.TextField(blank=True)
+    boshlanish_vaqti = models.CharField(max_length=500, blank=True)
+    tugash_vaqti = models.CharField(max_length=500, blank=True)
+    field_uz = models.TextField(blank=True)
+    field_ru = models.TextField(blank=True)
+    field_en = models.TextField(blank=True)
+    adress_uz  = models.CharField(max_length=500, blank=True)
+    adress_ru  = models.CharField(max_length=500, blank=True)
+    adress_en  = models.CharField(max_length=500, blank=True)
     sana = models.DateTimeField(auto_now_add=True)
 
 
 class GalareyaTuri(models.Model):
-    tur = models.CharField(max_length=500)
+    tur_uz = models.CharField(max_length=500, blank=True)
+    tur_ru = models.CharField(max_length=500, blank=True)
+    tur_en = models.CharField(max_length=500, blank=True)
 
 class Galareya(models.Model):
     tur_id = models.ForeignKey(GalareyaTuri, on_delete=models.CASCADE)
-    rasm = models.ImageField(upload_to='galareya/')
+    rasm = models.ImageField(upload_to='galareya/', blank=True)
 
 
 class Fikr(models.Model):
-    rasm = models.FileField(upload_to='fikr/')
-    video = models.FileField(upload_to='fikr/')
-    text = models.CharField(max_length=200, blank=True)
-    talaba = models.CharField(max_length=200, blank=True)
+    rasm = models.FileField(upload_to='fikr/', blank=True)
+    video = models.FileField(upload_to='fikr/', blank=True)
+    text_uz = models.CharField(max_length=200, blank=True)
+    text_ru = models.CharField(max_length=200, blank=True)
+    text_en = models.CharField(max_length=200, blank=True)
+    talaba_uz = models.CharField(max_length=200, blank=True)
+    talaba_ru = models.CharField(max_length=200, blank=True)
+    talaba_en = models.CharField(max_length=200, blank=True)
     link = models.URLField(max_length=500, blank=True)
 
 
