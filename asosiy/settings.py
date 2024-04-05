@@ -98,6 +98,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://yangi.kspi.uz",
     "http://kspi.uz",     
     "https://kspi.uz",
+    "http://kspiadmin.kspi.uz",     
+    "https://kspiadmin.kspi.uz",
 ]
 
 

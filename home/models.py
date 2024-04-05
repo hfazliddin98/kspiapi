@@ -71,7 +71,7 @@ class GalareyaTuri(models.Model):
     tur_en = models.CharField(max_length=500, blank=True)
 
 class Galareya(models.Model):
-    tur_id = models.ManyToManyField(GalareyaTuri)
+    tur_id = models.ForeignKey(GalareyaTuri, on_delete=models.CASCADE)
     rasm = models.ImageField(upload_to='galareya/', blank=True)
 
 
