@@ -1,8 +1,8 @@
 from rest_framework.permissions import AllowAny # type: ignore
 from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView # type: ignore
-from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika
-from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer, HamkorlarimizSerializer, TalabaSerializer, StatistikaSerializer
-
+from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika, ElektronKutubxona, MasofaviyTalim, VirtualQabulxona, VideoMaruzalar, Fakultet
+from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer, HamkorlarimizSerializer, TalabaSerializer
+from .serialazer import ElektronKutubxonaSerializer, VirtualQabulxonaSerializer, VideoMaruzalarSerializer, MasofaviyTalimSerializer, StatistikaSerializer, FakultetSerializer
 
 # yangilik 
 
@@ -244,4 +244,149 @@ class TalabaDestroyAPIView(DestroyAPIView):
     metadata_class = Talaba
     serializer_class = TalabaSerializer
     queryset = Talaba.objects.all()
+
+# ElektronKutubxona
+
+class ElektronKutubxonaListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = ElektronKutubxona
+    serializer_class = ElektronKutubxonaSerializer
+    queryset = ElektronKutubxona.objects.all()
+
+class ElektronKutubxonaRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = ElektronKutubxona
+    serializer_class = ElektronKutubxonaSerializer
+    queryset = ElektronKutubxona.objects.all()
+
+class ElektronKutubxonaCreateAPIView(CreateAPIView):
+    metadata_class = ElektronKutubxona
+    serializer_class = ElektronKutubxonaSerializer
+    queryset = ElektronKutubxona.objects.all()
+
+class ElektronKutubxonaUpdateAPIView(UpdateAPIView):
+    metadata_class = ElektronKutubxona
+    serializer_class = ElektronKutubxonaSerializer
+    queryset = ElektronKutubxona.objects.all()
+
+class ElektronKutubxonaDestroyAPIView(DestroyAPIView):
+    metadata_class = ElektronKutubxona
+    serializer_class = ElektronKutubxonaSerializer
+    queryset = ElektronKutubxona.objects.all()
+
+# MasofaviyTalim
+
+class MasofaviyTalimListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = MasofaviyTalim
+    serializer_class = MasofaviyTalimSerializer
+    queryset = MasofaviyTalim.objects.all()
+
+class MasofaviyTalimRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = MasofaviyTalim
+    serializer_class = MasofaviyTalimSerializer
+    queryset = MasofaviyTalim.objects.all()
+
+class MasofaviyTalimCreateAPIView(CreateAPIView):
+    metadata_class = MasofaviyTalim
+    serializer_class = MasofaviyTalimSerializer
+    queryset = MasofaviyTalim.objects.all()
+
+class MasofaviyTalimUpdateAPIView(UpdateAPIView):
+    metadata_class = MasofaviyTalim
+    serializer_class = MasofaviyTalimSerializer
+    queryset = MasofaviyTalim.objects.all()
+
+class MasofaviyTalimDestroyAPIView(DestroyAPIView):
+    metadata_class = MasofaviyTalim
+    serializer_class = MasofaviyTalimSerializer
+    queryset = MasofaviyTalim.objects.all()
+
+# VideoMaruzalar
+
+class VideoMaruzalarListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = VideoMaruzalar
+    serializer_class = VideoMaruzalarSerializer
+    queryset = VideoMaruzalar.objects.all()
+
+class VideoMaruzalarRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = VideoMaruzalar
+    serializer_class = VideoMaruzalarSerializer
+    queryset = VideoMaruzalar.objects.all()
+
+class VideoMaruzalarCreateAPIView(CreateAPIView):
+    metadata_class = VideoMaruzalar
+    serializer_class = VideoMaruzalarSerializer
+    queryset = VideoMaruzalar.objects.all()
+
+class VideoMaruzalarUpdateAPIView(UpdateAPIView):
+    metadata_class = VideoMaruzalar
+    serializer_class = VideoMaruzalarSerializer
+    queryset = VideoMaruzalar.objects.all()
+
+class VideoMaruzalarDestroyAPIView(DestroyAPIView):
+    metadata_class = VideoMaruzalar
+    serializer_class = VideoMaruzalarSerializer
+    queryset = VideoMaruzalar.objects.all()
+
+# VirtualQabulxona
+
+class VirtualQabulxonaListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = VirtualQabulxona
+    serializer_class = VirtualQabulxonaSerializer
+    queryset = VirtualQabulxona.objects.all()
+
+class VirtualQabulxonaRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = VirtualQabulxona
+    serializer_class = VirtualQabulxonaSerializer
+    queryset = VirtualQabulxona.objects.all()
+
+class VirtualQabulxonaCreateAPIView(CreateAPIView):
+    metadata_class = VirtualQabulxona
+    serializer_class = VirtualQabulxonaSerializer
+    queryset = VirtualQabulxona.objects.all()
+
+class VirtualQabulxonaUpdateAPIView(UpdateAPIView):
+    metadata_class = VirtualQabulxona
+    serializer_class = VirtualQabulxonaSerializer
+    queryset = VirtualQabulxona.objects.all()
+
+class VirtualQabulxonaDestroyAPIView(DestroyAPIView):
+    metadata_class = VirtualQabulxona
+    serializer_class = VirtualQabulxonaSerializer
+    queryset = VirtualQabulxona.objects.all()
+
+# Fakultet
+
+class FakultetListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Fakultet
+    serializer_class = FakultetSerializer
+    queryset = Fakultet.objects.all()
+
+class FakultetRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Fakultet
+    serializer_class = FakultetSerializer
+    queryset = Fakultet.objects.all()
+
+class FakultetCreateAPIView(CreateAPIView):
+    metadata_class = Fakultet
+    serializer_class = FakultetSerializer
+    queryset = Fakultet.objects.all()
+
+class FakultetUpdateAPIView(UpdateAPIView):
+    metadata_class = Fakultet
+    serializer_class = FakultetSerializer
+    queryset = Fakultet.objects.all()
+
+class FakultetDestroyAPIView(DestroyAPIView):
+    metadata_class = Fakultet
+    serializer_class = FakultetSerializer
+    queryset = Fakultet.objects.all()
 

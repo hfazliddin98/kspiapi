@@ -7,6 +7,11 @@ from .views import FikrListAPIView, FikrRetrieveAPIView, FikrCreateAPIView, Fikr
 from .views import TalabaListAPIView, TalabaRetrieveAPIView, TalabaCreateAPIView, TalabaUpdateAPIView, TalabaDestroyAPIView
 from .views import HamkorlarimizListAPIView, HamkorlarimizRetrieveAPIView, HamkorlarimizCreateAPIView, HamkorlarimizUpdateAPIView, HamkorlarimizDestroyAPIView
 from .views import StatistikaListAPIView, StatistikaRetrieveAPIView, StatistikaCreateAPIView, StatistikaUpdateAPIView, StatistikaDestroyAPIView
+from .views import ElektronKutubxonaListAPIView, ElektronKutubxonaRetrieveAPIView, ElektronKutubxonaCreateAPIView, ElektronKutubxonaUpdateAPIView, ElektronKutubxonaDestroyAPIView
+from .views import VideoMaruzalarListAPIView, VideoMaruzalarRetrieveAPIView, VideoMaruzalarCreateAPIView, VideoMaruzalarUpdateAPIView, VideoMaruzalarDestroyAPIView
+from .views import VirtualQabulxonaListAPIView, VirtualQabulxonaRetrieveAPIView, VirtualQabulxonaCreateAPIView, VirtualQabulxonaUpdateAPIView, VirtualQabulxonaDestroyAPIView
+from .views import MasofaviyTalimListAPIView, MasofaviyTalimRetrieveAPIView, MasofaviyTalimCreateAPIView, MasofaviyTalimUpdateAPIView, MasofaviyTalimDestroyAPIView
+from .views import FakultetListAPIView, FakultetRetrieveAPIView, FakultetCreateAPIView, FakultetUpdateAPIView, FakultetDestroyAPIView
 
 
 
@@ -65,6 +70,41 @@ urlpatterns = [
     path('statistika/<int:pk>/', StatistikaRetrieveAPIView.as_view()),
     path('statistika/create/', StatistikaCreateAPIView.as_view()),
     path('statistika/update/<int:pk>/', StatistikaUpdateAPIView.as_view()),
-    path('statistika/delete/<int:pk>/', StatistikaDestroyAPIView.as_view()),  
+    path('statistika/delete/<int:pk>/', StatistikaDestroyAPIView.as_view()), 
+
+    # ElektronKutubxona
+    path('elektronkutubxona/', ElektronKutubxonaListAPIView.as_view()),    
+    path('elektronkutubxona/<int:pk>/', ElektronKutubxonaRetrieveAPIView.as_view()),
+    path('elektronkutubxona/create/', ElektronKutubxonaCreateAPIView.as_view()),
+    path('elektronkutubxona/update/<int:pk>/', ElektronKutubxonaUpdateAPIView.as_view()),
+    path('elektronkutubxona/delete/<int:pk>/', ElektronKutubxonaDestroyAPIView.as_view()), 
+
+    # VideoMaruzalar
+    path('videomaruzalar/', VideoMaruzalarListAPIView.as_view()),    
+    path('videomaruzalar/<int:pk>/', VideoMaruzalarRetrieveAPIView.as_view()),
+    path('videomaruzalar/create/', VideoMaruzalarCreateAPIView.as_view()),
+    path('videomaruzalar/update/<int:pk>/', VideoMaruzalarUpdateAPIView.as_view()),
+    path('videomaruzalar/delete/<int:pk>/', VideoMaruzalarDestroyAPIView.as_view()),  
+
+    # VirtualQabulxona
+    path('virtualqabulxona/', VirtualQabulxonaListAPIView.as_view()),    
+    path('virtualqabulxona/<int:pk>/', VirtualQabulxonaRetrieveAPIView.as_view()),
+    path('virtualqabulxona/create/', VirtualQabulxonaCreateAPIView.as_view()),
+    path('virtualqabulxona/update/<int:pk>/', VirtualQabulxonaUpdateAPIView.as_view()),
+    path('virtualqabulxona/delete/<int:pk>/', VirtualQabulxonaDestroyAPIView.as_view()),  
+
+    # MasofaviyTalim
+    path('masofaviytalim/', MasofaviyTalimListAPIView.as_view()),    
+    path('masofaviytalim/<int:pk>/', MasofaviyTalimRetrieveAPIView.as_view()),
+    path('masofaviytalim/create/', MasofaviyTalimCreateAPIView.as_view()),
+    path('masofaviytalim/update/<int:pk>/', MasofaviyTalimUpdateAPIView.as_view()),
+    path('masofaviytalim/delete/<int:pk>/', MasofaviyTalimDestroyAPIView.as_view()),  
+
+    # Fakultet
+    path('fakultet/', FakultetListAPIView.as_view()),    
+    path('fakultet/<int:pk>/', FakultetRetrieveAPIView.as_view()),
+    path('fakultet/create/', FakultetCreateAPIView.as_view()),
+    path('fakultet/update/<int:pk>/', FakultetUpdateAPIView.as_view()),
+    path('fakultet/delete/<int:pk>/', FakultetDestroyAPIView.as_view()),  
 
 ]

@@ -137,6 +137,27 @@ class Talaba(models.Model):
     talaba_inferior_en = models.CharField(max_length=255, blank=True)
 
 
+class VirtualQabulxona(models.Model):
+    fish = models.CharField(max_length=255, blank=True)
+    telefon = models.CharField(max_length=255, blank=True)
+    email = models.CharField(max_length=255, blank=True)
+    mavzu = models.CharField(max_length=255, blank=True)
+    xabar = models.TextField(blank=True)
+
+class ElektronKutubxona(models.Model):
+    link = models.CharField(max_length=255, blank=True)
+
+class MasofaviyTalim(models.Model):
+    link = models.CharField(max_length=255, blank=True)
+
+class Fakultet(models.Model):
+    name = models.CharField(max_length=255, blank=True)
+
+class VideoMaruzalar(models.Model):
+    fakultet_id = models.ForeignKey(Fakultet, on_delete=models.CASCADE)
+    link = models.CharField(max_length=255, blank=True)
+    video = models.FileField(upload_to='video_maruzalar/', blank=True)
+
 
     
 
