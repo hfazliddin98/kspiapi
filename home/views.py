@@ -1,7 +1,7 @@
-from rest_framework.permissions import AllowAny
-from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView
-from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr
-from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer
+from rest_framework.permissions import AllowAny # type: ignore
+from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView # type: ignore
+from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika
+from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer, HamkorlarimizSerializer, TalabaSerializer, StatistikaSerializer
 
 
 # yangilik 
@@ -155,4 +155,93 @@ class FikrDestroyAPIView(DestroyAPIView):
     metadata_class = Fikr
     serializer_class = FikrSerializer
     queryset = Fikr.objects.all()
+
+
+
+# hamkor
+
+class HamkorlarimizListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Hamkorlarimiz
+    serializer_class = HamkorlarimizSerializer
+    queryset = Hamkorlarimiz.objects.all()
+
+class HamkorlarimizRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Hamkorlarimiz
+    serializer_class = HamkorlarimizSerializer
+    queryset = Hamkorlarimiz.objects.all()
+
+class HamkorlarimizCreateAPIView(CreateAPIView):
+    metadata_class = Hamkorlarimiz
+    serializer_class = HamkorlarimizSerializer
+    queryset = Hamkorlarimiz.objects.all()
+
+class HamkorlarimizUpdateAPIView(UpdateAPIView):
+    metadata_class = Hamkorlarimiz
+    serializer_class = HamkorlarimizSerializer
+    queryset = Hamkorlarimiz.objects.all()
+
+class HamkorlarimizDestroyAPIView(DestroyAPIView):
+    metadata_class = Hamkorlarimiz
+    serializer_class = HamkorlarimizSerializer
+    queryset = Hamkorlarimiz.objects.all()
+
+# statistika
+
+class StatistikaListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Statistika
+    serializer_class = StatistikaSerializer
+    queryset = Statistika.objects.all()
+
+class StatistikaRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Statistika
+    serializer_class = StatistikaSerializer
+    queryset = Statistika.objects.all()
+
+class StatistikaCreateAPIView(CreateAPIView):
+    metadata_class = Statistika
+    serializer_class = StatistikaSerializer
+    queryset = Statistika.objects.all()
+
+class StatistikaUpdateAPIView(UpdateAPIView):
+    metadata_class = Statistika
+    serializer_class = StatistikaSerializer
+    queryset = Statistika.objects.all()
+
+class StatistikaDestroyAPIView(DestroyAPIView):
+    metadata_class = Statistika
+    serializer_class = StatistikaSerializer
+    queryset = Statistika.objects.all()
+
+# talaba
+
+class TalabaListAPIView(ListAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Talaba
+    serializer_class = TalabaSerializer
+    queryset = Talaba.objects.all()
+
+class TalabaRetrieveAPIView(RetrieveAPIView):
+    permission_classes = [AllowAny]
+    metadata_class = Talaba
+    serializer_class = TalabaSerializer
+    queryset = Talaba.objects.all()
+
+class TalabaCreateAPIView(CreateAPIView):
+    metadata_class = Talaba
+    serializer_class = TalabaSerializer
+    queryset = Talaba.objects.all()
+
+class TalabaUpdateAPIView(UpdateAPIView):
+    metadata_class = Talaba
+    serializer_class = TalabaSerializer
+    queryset = Talaba.objects.all()
+
+class TalabaDestroyAPIView(DestroyAPIView):
+    metadata_class = Talaba
+    serializer_class = TalabaSerializer
+    queryset = Talaba.objects.all()
 

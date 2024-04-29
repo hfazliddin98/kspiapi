@@ -16,9 +16,9 @@ SECRET_KEY = 'django-insecure-o=mcn5dt7zbn3lf!2serh_rnh&o@rn^)k#1x+w8&t2@5ac#jr6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kspiapi.kspi.uz', '.kokanddeveloper.uz', 'localhost', '192.168.0.55','127.0.0.1']
+ALLOWED_HOSTS = ['kspiapi.kspi.uz', '.kokanddeveloper.uz', '.pythonanywhere.com', 'localhost', '192.168.0.55','127.0.0.1']
 # CSRF_TRUSTED_ORIGINS=['https://kspiapi.kokanddeveloper.uz', 'http://kspiapi.kokanddeveloper.uz', 'http://127.0.0.1']
-CSRF_TRUSTED_ORIGINS=['https://kspiapi.kspi.uz', 'http://kspiapi.kspi.uz', 'http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS=['https://kspiapi.kspi.uz', 'http://kspiapi.kspi.uz', 'https://kspi.pythonanywhere.com', 'http://kspi.pythonanywhere.com', 'http://127.0.0.1']
 
 # Application definition
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     # men qoshgan applar
     'users',
     'home',
+    'institut',
 ]
 
 MIDDLEWARE = [

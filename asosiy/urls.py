@@ -12,12 +12,12 @@ from users.views import bosh_sahifa
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Kengash uchun API",
+      title="KSPI uchun API",
       default_version='v1',
-      description="Kengash uchun yaratilgan API",
+      description="KSPI sayti uchun yaratilgan API",
       terms_of_service="https://kspi.uz",
       contact=openapi.Contact(email="hatamovfazliddin5@gmail.com"),
-      license=openapi.License(name="Kengash License"),
+      license=openapi.License(name="KSPI License"),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
@@ -29,6 +29,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('home/', include('home.urls')),
+    path('institut/', include('institut.urls')),
   
 
     # swagger

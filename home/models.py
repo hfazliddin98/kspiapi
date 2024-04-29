@@ -87,6 +87,57 @@ class Fikr(models.Model):
     link = models.URLField(max_length=500, blank=True)
 
 
+class Hamkorlarimiz(models.Model):
+    hamkor_rasm = models.FileField(upload_to='hamkor_rasm', blank=True)
+
+
+class Statistika(models.Model):
+    statistika_title_uz = models.CharField(max_length=255, blank=True)
+    statistika_title_ru = models.CharField(max_length=255, blank=True)
+    statistika_title_en = models.CharField(max_length=255, blank=True)
+
+    statistika_text_uz = models.TextField(blank=True)
+    statistika_text_ru = models.TextField(blank=True)
+    statistika_text_en = models.TextField(blank=True)
+
+    talaba_title_uz = models.CharField(max_length=255, blank=True)
+    talaba_title_ru = models.CharField(max_length=255, blank=True)
+    talaba_title_en = models.CharField(max_length=255, blank=True)
+    talaba_nomer = models.CharField(max_length=255, blank=True)
+    
+    phd_title_uz = models.CharField(max_length=255, blank=True)
+    phd_title_ru = models.CharField(max_length=255, blank=True)
+    phd_title_en = models.CharField(max_length=255, blank=True)
+    phd_nomer = models.CharField(max_length=255, blank=True)
+
+    oqituvchi_title_uz = models.CharField(max_length=255, blank=True)
+    oqituvchi_title_ru = models.CharField(max_length=255, blank=True)
+    oqituvchi_title_en = models.CharField(max_length=255, blank=True)
+    oqituvchi_nomer = models.CharField(max_length=255, blank=True)
+
+    fan_doktiri_title_uz = models.CharField(max_length=255, blank=True)
+    fan_doktiri_title_ru = models.CharField(max_length=255, blank=True)
+    fan_doktiri_title_en = models.CharField(max_length=255, blank=True)
+    fan_doktiri_nomer = models.CharField(max_length=255, blank=True)
+
+
+class Talaba(models.Model):
+    talaba_rasm = models.ImageField(upload_to='talaba_rasm/', blank=True)
+
+    talaba_coment_uz = models.CharField(max_length=255, blank=True)
+    talaba_coment_ru = models.CharField(max_length=255, blank=True)
+    talaba_coment_en = models.CharField(max_length=255, blank=True)
+
+    talaba_ism_uz = models.CharField(max_length=255, blank=True)
+    talaba_ism_ru = models.CharField(max_length=255, blank=True)
+    talaba_ism_en = models.CharField(max_length=255, blank=True)
+
+    talaba_inferior_uz = models.CharField(max_length=255, blank=True)
+    talaba_inferior_ru = models.CharField(max_length=255, blank=True)
+    talaba_inferior_en = models.CharField(max_length=255, blank=True)
+
+
+
     
 
 

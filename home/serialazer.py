@@ -1,5 +1,5 @@
-from rest_framework import serializers
-from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr
+from rest_framework import serializers # type: ignore
+from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Statistika, Hamkorlarimiz, Talaba
 
 class YangilikSerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,6 +32,27 @@ class FikrSerializer(serializers.ModelSerializer):
         model = Fikr
         fields = '__all__'
         depth = 3
+
+
+class StatistikaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Statistika
+        fields = '__all__'
+        depth = 3
+
+class HamkorlarimizSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Hamkorlarimiz
+        fields = '__all__'
+        depth = 3
+
+class TalabaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Talaba
+        fields = '__all__'
+        depth = 3
+
+
 
 
 
