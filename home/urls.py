@@ -4,6 +4,10 @@ from .views import ElonListAPIView, ElonRetrieveAPIView, ElonCreateAPIView, Elon
 from .views import GalareyaTuriListAPIView, GalareyaTuriRetrieveAPIView, GalareyaTuriCreateAPIView, GalareyaTuriUpdateAPIView, GalareyaTuriDestroyAPIView
 from .views import GalareyaListAPIView, GalareyaRetrieveAPIView, GalareyaCreateAPIView, GalareyaUpdateAPIView, GalareyaDestroyAPIView
 from .views import FikrListAPIView, FikrRetrieveAPIView, FikrCreateAPIView, FikrUpdateAPIView, FikrDestroyAPIView
+from .views import TalabaListAPIView, TalabaRetrieveAPIView, TalabaCreateAPIView, TalabaUpdateAPIView, TalabaDestroyAPIView
+from .views import HamkorlarimizListAPIView, HamkorlarimizRetrieveAPIView, HamkorlarimizCreateAPIView, HamkorlarimizUpdateAPIView, HamkorlarimizDestroyAPIView
+from .views import StatistikaListAPIView, StatistikaRetrieveAPIView, StatistikaCreateAPIView, StatistikaUpdateAPIView, StatistikaDestroyAPIView
+
 
 
 urlpatterns = [
@@ -40,5 +44,27 @@ urlpatterns = [
     path('fikr/<int:pk>/', FikrRetrieveAPIView.as_view()),
     path('fikr/create/', FikrCreateAPIView.as_view()),
     path('fikr/update/<int:pk>/', FikrUpdateAPIView.as_view()),
-    path('fikr/delete/<int:pk>/', FikrDestroyAPIView.as_view()),    
+    path('fikr/delete/<int:pk>/', FikrDestroyAPIView.as_view()),  
+      
+    # talaba
+    path('talaba/', TalabaListAPIView.as_view()),    
+    path('talaba/<int:pk>/', TalabaRetrieveAPIView.as_view()),
+    path('talaba/create/', TalabaCreateAPIView.as_view()),
+    path('talaba/update/<int:pk>/', TalabaUpdateAPIView.as_view()),
+    path('talaba/delete/<int:pk>/', TalabaDestroyAPIView.as_view()),  
+
+    # hamkorlarimiz
+    path('hamkorlarimiz/', HamkorlarimizListAPIView.as_view()),    
+    path('hamkorlarimiz/<int:pk>/', HamkorlarimizRetrieveAPIView.as_view()),
+    path('hamkorlarimiz/create/', HamkorlarimizCreateAPIView.as_view()),
+    path('hamkorlarimiz/update/<int:pk>/', HamkorlarimizUpdateAPIView.as_view()),
+    path('hamkorlarimiz/delete/<int:pk>/', HamkorlarimizDestroyAPIView.as_view()),  
+
+    # statistika
+    path('statistika/', StatistikaListAPIView.as_view()),    
+    path('statistika/<int:pk>/', StatistikaRetrieveAPIView.as_view()),
+    path('statistika/create/', StatistikaCreateAPIView.as_view()),
+    path('statistika/update/<int:pk>/', StatistikaUpdateAPIView.as_view()),
+    path('statistika/delete/<int:pk>/', StatistikaDestroyAPIView.as_view()),  
+
 ]
