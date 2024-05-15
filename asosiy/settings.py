@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'asosiy.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated', # foydalanuvchilar uchun ruhsatlar
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly', # foydalanuvchilar uchun ruhsatlar
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.SessionAuthentication',
@@ -93,8 +93,6 @@ CORS_ALLOWED_ORIGINS = [
     "https://192.168.0.5",
     "http://192.168.0.49",     
     "https://192.168.0.49",
-    "http://kengash.pythonanywhere.com",     
-    "https://kengash.pythonanywhere.com",
     "http://yangi.kspi.uz",     
     "https://yangi.kspi.uz",
     "http://kspi.uz",     

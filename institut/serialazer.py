@@ -5,5 +5,5 @@ class InstitutHaqidaSerializer(serializers.ModelSerializer):
     class Meta:
         model = InstitutHaqida
         fields = '__all__'
-        depth = 3
+
 

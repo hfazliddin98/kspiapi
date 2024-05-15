@@ -5,20 +5,20 @@ class YangilikSerializer(serializers.ModelSerializer):
     class Meta:
         model = Yangilik
         fields = '__all__'
-        depth = 3
+        
 
 class ElonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Elon
         fields = '__all__'
-        depth = 3
+        
 
 
 class GalareyaTuriSerializer(serializers.ModelSerializer):
     class Meta:
         model = GalareyaTuri
         fields = '__all__'
-        depth = 3
+        
 
 
 class GalareyaSerializer(serializers.ModelSerializer):
@@ -31,36 +31,32 @@ class FikrSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fikr
         fields = '__all__'
-        depth = 3
+        
 
 
 class StatistikaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Statistika
         fields = '__all__'
-        depth = 3
+        
 
 class HamkorlarimizSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hamkorlarimiz
         fields = '__all__'
-        depth = 3
+        
 
 class TalabaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Talaba
         fields = '__all__'
-        depth = 3
+        
 
 class ElektronKutubxonaSerializer(serializers.ModelSerializer):
     class Meta:
         model = ElektronKutubxona
         fields = '__all__'
 
-class VideoMaruzalarSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = VideoMaruzalar
-        fields = '__all__'
 
 class VirtualQabulxonaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -72,13 +68,19 @@ class MasofaviyTalimSerializer(serializers.ModelSerializer):
         model = MasofaviyTalim
         fields = '__all__'
 
+
+# yangi qoshilgan kodlar
+
 class FakultetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fakultet
-        fields = '__all__'
+        fields = ('id', 'name')
 
+class VideoMaruzalarSerializer(serializers.ModelSerializer):
+    fakultet_id = FakultetSerializer()
 
-
-
+    class Meta:
+        model = VideoMaruzalar
+        fields = ('id', 'link', 'video', 'fakultet_id')
 
 

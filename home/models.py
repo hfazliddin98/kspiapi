@@ -89,6 +89,7 @@ class Fikr(models.Model):
 
 class Hamkorlarimiz(models.Model):
     hamkor_rasm = models.FileField(upload_to='hamkor_rasm', blank=True)
+    hamkor_url = models.URLField(max_length=500, blank=True)
 
 
 class Statistika(models.Model):
@@ -151,7 +152,9 @@ class MasofaviyTalim(models.Model):
     link = models.CharField(max_length=255, blank=True)
 
 class Fakultet(models.Model):
-    name = models.CharField(max_length=255, blank=True)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
 
 class VideoMaruzalar(models.Model):
     fakultet_id = models.ForeignKey(Fakultet, on_delete=models.CASCADE)
