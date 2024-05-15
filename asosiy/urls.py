@@ -1,14 +1,22 @@
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework import permissions
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from users.views import bosh_sahifa
 
+# from rest_framework_swagger.views import get_swagger_view
 
+
+
+# schema_view = get_swagger_view(title='Pastebin API')
+
+# urlpatterns = [
+#    re_path(r'swagger/', schema_view)
+# ]
 
 schema_view = get_schema_view(
    openapi.Info(

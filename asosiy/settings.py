@@ -102,6 +102,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
+
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=3), # acses token necha kun amal qilishi
     "REFRESH_TOKEN_LIFETIME": timedelta(days=15), # acses tokeni yangilash uchun refresh tokenni necha kun amal qilishi

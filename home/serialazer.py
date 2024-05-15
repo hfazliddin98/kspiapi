@@ -74,7 +74,7 @@ class MasofaviyTalimSerializer(serializers.ModelSerializer):
 class FakultetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fakultet
-        fields = ('id', 'name')
+        fields = ('id', 'name_uz', 'name_ru', 'name_en')
 
 class VideoMaruzalarSerializer(serializers.ModelSerializer):
     fakultet_id = FakultetSerializer()
