@@ -1,5 +1,7 @@
 from rest_framework import serializers # type: ignore
 from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Statistika, Hamkorlarimiz, Talaba, ElektronKutubxona, VideoMaruzalar, VirtualQabulxona, MasofaviyTalim, Fakultet
+from .models import NavbarName, NavbarLink
+
 
 class YangilikSerializer(serializers.ModelSerializer):
     class Meta:
@@ -84,3 +86,16 @@ class VideoMaruzalarSerializer(serializers.ModelSerializer):
         fields = ('id', 'link', 'video', 'fakultet_id')
 
 
+class NavbarNameSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = NavbarName
+        fields = ('id', 'name_uz', 'name_ru', 'name_en')
+
+
+class NavbarLinkSerializer(serializers.ModelSerializer):
+    navbar_name_id = NavbarNameSerializer()
+
+    class Meta:
+        model = NavbarLink
+        fields = ('id', 'link', 'navbar_name_id')

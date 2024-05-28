@@ -38,6 +38,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('home/', include('home.urls')),
     path('institut/', include('institut.urls')),
+    path('abiturient/', include('abiturient.urls')),
   
 
     # swagger
