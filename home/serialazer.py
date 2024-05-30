@@ -1,6 +1,8 @@
 from rest_framework import serializers # type: ignore
-from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Statistika, Hamkorlarimiz, Talaba, ElektronKutubxona, VideoMaruzalar, VirtualQabulxona, MasofaviyTalim, Fakultet
+from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Statistika, Hamkorlarimiz, Talaba, ElektronKutubxona, VideoMaruzalar, VirtualQabulxona, MasofaviyTalim
 from .models import NavbarName, NavbarLink
+from tuzilma.models import Fakultet
+from tuzilma.serialazer import FakultetSerializer
 
 
 class YangilikSerializer(serializers.ModelSerializer):
@@ -70,13 +72,6 @@ class MasofaviyTalimSerializer(serializers.ModelSerializer):
         model = MasofaviyTalim
         fields = '__all__'
 
-
-# yangi qoshilgan kodlar
-
-class FakultetSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Fakultet
-        fields = ('id', 'name_uz', 'name_ru', 'name_en')
 
 class VideoMaruzalarSerializer(serializers.ModelSerializer):
     fakultet_id = FakultetSerializer()

@@ -1,6 +1,4 @@
 from rest_framework.viewsets import ModelViewSet
-
-from rest_framework.permissions import AllowAny # type: ignore
 from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika, ElektronKutubxona, MasofaviyTalim, VirtualQabulxona, VideoMaruzalar, Fakultet
 from .models import NavbarName, NavbarLink
 from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer, HamkorlarimizSerializer, TalabaSerializer

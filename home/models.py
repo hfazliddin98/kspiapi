@@ -1,4 +1,5 @@
-from django.db import models    
+from django.db import models   
+from tuzilma.models import Fakultet 
 
 
 class Yangilik(models.Model):
@@ -7,47 +8,30 @@ class Yangilik(models.Model):
     rasm_3 = models.ImageField(upload_to='yangilik/', blank=True)   
     rasm_4 = models.ImageField(upload_to='yangilik/', blank=True)   
     rasm_5 = models.ImageField(upload_to='yangilik/', blank=True)   
+    fayl_1 = models.FileField(upload_to='yangilik_fayl/', blank=True)   
+    fayl_2 = models.FileField(upload_to='yangilik_fayl/', blank=True)   
+    fayl_3 = models.FileField(upload_to='yangilik_fayl/', blank=True)   
+    fayl_4 = models.FileField(upload_to='yangilik_fayl/', blank=True)   
+    fayl_5 = models.FileField(upload_to='yangilik_fayl/', blank=True)   
     title_uz  = models.CharField(max_length=500, blank=True)
     title_ru  = models.CharField(max_length=500, blank=True)
     title_en  = models.CharField(max_length=500, blank=True)
     subtitle_uz  = models.CharField(max_length=500, blank=True)
     subtitle_ru  = models.CharField(max_length=500, blank=True)
     subtitle_en  = models.CharField(max_length=500, blank=True)
-    body_0_uz = models.TextField(blank=True)
-    body_0_ru = models.TextField(blank=True)
-    body_0_en = models.TextField(blank=True)
-    body_1_uz = models.TextField(blank=True)
-    body_1_ru = models.TextField(blank=True)
-    body_1_en = models.TextField(blank=True)
-    body_2_uz = models.TextField(blank=True)
-    body_2_ru = models.TextField(blank=True)
-    body_2_en = models.TextField(blank=True)
-    body_3_uz = models.TextField(blank=True)
-    body_3_ru = models.TextField(blank=True)
-    body_3_en = models.TextField(blank=True)
-    body_4_uz = models.TextField(blank=True)
-    body_4_ru = models.TextField(blank=True)
-    body_4_en = models.TextField(blank=True)
-    body_5_uz = models.TextField(blank=True)
-    body_5_ru = models.TextField(blank=True)
-    body_5_en = models.TextField(blank=True)
-    body_6_uz = models.TextField(blank=True)
-    body_6_ru = models.TextField(blank=True)
-    body_6_en = models.TextField(blank=True)
-    body_7_uz = models.TextField(blank=True)
-    body_7_ru = models.TextField(blank=True)
-    body_7_en = models.TextField(blank=True)
-    body_8_uz = models.TextField(blank=True)
-    body_8_ru = models.TextField(blank=True)
-    body_8_en = models.TextField(blank=True)
-    body_9_uz = models.TextField(blank=True)
-    body_9_ru = models.TextField(blank=True)
-    body_9_en = models.TextField(blank=True)
+    body_uz = models.TextField(blank=True)
+    body_ru = models.TextField(blank=True)
+    body_en = models.TextField(blank=True)    
     sana = models.CharField(max_length=500, blank=True)
 
 
 class Elon(models.Model):
-    rasm = models.ImageField(upload_to='elon/', blank=True)
+    rasm = models.ImageField(upload_to='elon/', blank=True)     
+    fayl_1 = models.FileField(upload_to='elon_fayl/', blank=True)   
+    fayl_2 = models.FileField(upload_to='elon_fayl/', blank=True)   
+    fayl_3 = models.FileField(upload_to='elon_fayl/', blank=True)   
+    fayl_4 = models.FileField(upload_to='elon_fayl/', blank=True)   
+    fayl_5 = models.FileField(upload_to='elon_fayl/', blank=True)  
     title_uz  = models.CharField(max_length=1500, blank=True)
     title_ru  = models.CharField(max_length=1500, blank=True)
     title_en  = models.CharField(max_length=1500, blank=True)
@@ -151,10 +135,7 @@ class ElektronKutubxona(models.Model):
 class MasofaviyTalim(models.Model):
     link = models.CharField(max_length=255, blank=True)
 
-class Fakultet(models.Model):
-    name_uz = models.CharField(max_length=255, blank=True)
-    name_ru = models.CharField(max_length=255, blank=True)
-    name_en = models.CharField(max_length=255, blank=True)
+
 
 class VideoMaruzalar(models.Model):
     fakultet_id = models.ForeignKey(Fakultet, on_delete=models.CASCADE)

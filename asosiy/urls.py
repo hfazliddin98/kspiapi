@@ -39,6 +39,7 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('institut/', include('institut.urls')),
     path('abiturient/', include('abiturient.urls')),
+    path('tuzilma/', include('tuzilma.urls')),
   
 
     # swagger
