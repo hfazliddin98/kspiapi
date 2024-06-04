@@ -8,15 +8,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from users.views import bosh_sahifa
 
-# from rest_framework_swagger.views import get_swagger_view
 
-
-
-# schema_view = get_swagger_view(title='Pastebin API')
-
-# urlpatterns = [
-#    re_path(r'swagger/', schema_view)
-# ]
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -40,6 +32,7 @@ urlpatterns = [
     path('institut/', include('institut.urls')),
     path('abiturient/', include('abiturient.urls')),
     path('tuzilma/', include('tuzilma.urls')),
+    path('talaba/', include('talaba.urls')),
   
 
     # swagger

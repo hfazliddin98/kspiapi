@@ -9,6 +9,7 @@ class RektoratSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rektorat
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -19,6 +20,7 @@ class FakultetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fakultet
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -29,6 +31,7 @@ class KafedraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Kafedra
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -39,6 +42,7 @@ class BolimSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bolim
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -49,6 +53,7 @@ class MarkazSerializer(serializers.ModelSerializer):
     class Meta:
         model = Markaz
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -59,6 +64,7 @@ class RektoratRahbarSerializer(serializers.ModelSerializer):
     class Meta:
         model = RektoratRahbar
         fields = (
+            'id',
             'rektorat_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -75,6 +81,8 @@ class RektoratRahbarSerializer(serializers.ModelSerializer):
             'telefon_nomer',
             'tg_username',
             'biografiya_uz',
+            'biografiya_ru',
+            'biografiya_en',
         )
         
 
@@ -83,6 +91,7 @@ class FakultetRahbarSerializer(serializers.ModelSerializer):
     class Meta:
         model = FakultetRahbar
         fields = (
+            'id',
             'fakultet_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -99,6 +108,8 @@ class FakultetRahbarSerializer(serializers.ModelSerializer):
             'telefon_nomer',
             'tg_username',
             'biografiya_uz',
+            'biografiya_ru',
+            'biografiya_en',
         )
         
 
@@ -107,6 +118,7 @@ class KafedraRahbarSerializer(serializers.ModelSerializer):
     class Meta:
         model = KafedraRahbar
         fields = (
+            'id',
             'kafedra_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -123,6 +135,8 @@ class KafedraRahbarSerializer(serializers.ModelSerializer):
             'telefon_nomer',
             'tg_username',
             'biografiya_uz',
+            'biografiya_ru',
+            'biografiya_en',
         )
         
 
@@ -131,6 +145,7 @@ class BolimRahbarSerializer(serializers.ModelSerializer):
     class Meta:
         model = BolimRahbar
         fields = (
+            'id',
             'bolim_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -147,6 +162,8 @@ class BolimRahbarSerializer(serializers.ModelSerializer):
             'telefon_nomer',
             'tg_username',
             'biografiya_uz',
+            'biografiya_ru',
+            'biografiya_en',
         )
         
 
@@ -155,6 +172,7 @@ class MarkazRahbarSerializer(serializers.ModelSerializer):
     class Meta:
         model = MarkazRahbar
         fields = (
+            'id',
             'markaz_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -171,6 +189,8 @@ class MarkazRahbarSerializer(serializers.ModelSerializer):
             'telefon_nomer',
             'tg_username',
             'biografiya_uz',
+            'biografiya_ru',
+            'biografiya_en',
         )
 
 # Hodimlar
@@ -180,6 +200,7 @@ class RektoratHodimSerializer(serializers.ModelSerializer):
     class Meta:
         model = RektoratHodim
         fields = (
+            'id',
             'rektorat_rahbar_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -199,6 +220,7 @@ class FakultetHodimSerializer(serializers.ModelSerializer):
     class Meta:
         model = FakultetHodim
         fields = (
+            'id',
             'fakultet_rahbar_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -218,6 +240,7 @@ class KafedraHodimSerializer(serializers.ModelSerializer):
     class Meta:
         model = KafedraHodim
         fields = (
+            'id',
             'kafedra_rahbar_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -237,6 +260,7 @@ class BolimHodimSerializer(serializers.ModelSerializer):
     class Meta:
         model = BolimHodim
         fields = (
+            'id',
             'bolim_rahbar_id',
             'lavozim_uz',
             'lavozim_ru',
@@ -256,6 +280,7 @@ class MarkazHodimSerializer(serializers.ModelSerializer):
     class Meta:
         model = MarkazHodim
         fields = (
+            'id',
             'markaz_rahbar_id',
             'lavozim_uz',
             'lavozim_ru',

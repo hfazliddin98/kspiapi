@@ -9,6 +9,8 @@ class CallMarkazViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
 
 
+ 
+
     
 
 class QabulHujjatiViewSet(ModelViewSet):
@@ -17,6 +19,8 @@ class QabulHujjatiViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
 
 
+ 
+
 
 class BakalavrViewSet(ModelViewSet):
     queryset = Bakalavr.objects.all()
@@ -24,10 +28,14 @@ class BakalavrViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
 
 
+ 
+
 
 class MagistrViewSet(ModelViewSet):
     queryset = Magistr.objects.all()
     serializer_class = MagistrSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
 
+
+ 
 

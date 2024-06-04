@@ -10,30 +10,40 @@ class InstitutHaqidaViewSet(ModelViewSet):
     queryset = InstitutHaqida.objects.all()
     serializer_class = InstitutHaqidaSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
-    
+
+
+
 
 class InstitutMalumotlariViewSet(ModelViewSet):
     queryset = InstitutMalumotlari.objects.all()
     serializer_class = InstitutMalumotlariSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
-    
+
+
+
 class KengashViewSet(ModelViewSet):
     queryset = Kengash.objects.all()
     serializer_class = KengashSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
-    
+
+
+
 
 class TuzilmaViewSet(ModelViewSet):
     queryset = Tuzilma.objects.all()
     serializer_class = TuzilmaSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
-    
+
+
+
 
 class InstitutRekvizitiViewSet(ModelViewSet):
     queryset = InstitutRekviziti.objects.all()
     serializer_class = InstitutRekvizitiSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
-    
+
+
+
 
 class BankRekvizitiViewSet(ModelViewSet):
     queryset = BankRekviziti.objects.all()
@@ -41,7 +51,11 @@ class BankRekvizitiViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
 
 
+
+
 class QabulxonaViewSet(ModelViewSet):
     queryset = Qabulxona.objects.all()
     serializer_class = QabulxonaSerializer
     http_method_names = ['get', 'post']
+
+

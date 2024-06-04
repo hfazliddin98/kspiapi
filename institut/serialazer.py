@@ -5,6 +5,7 @@ class InstitutHaqidaSerializer(serializers.ModelSerializer):
     class Meta:
         model = InstitutHaqida
         fields = (
+            'id',
             'title_uz',
             'title_ru',
             'title_en',
@@ -19,6 +20,7 @@ class InstitutMalumotlariSerializer(serializers.ModelSerializer):
     class Meta:
         model = InstitutMalumotlari
         fields = (
+            'id',
             'title_uz',
             'title_ru',
             'title_en',
@@ -33,6 +35,7 @@ class KengashSerializer(serializers.ModelSerializer):
     class Meta:
         model = Kengash
         fields = (
+            'id',
             'fish', 
             'telefon', 
             'email', 
@@ -45,6 +48,7 @@ class TuzilmaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tuzilma
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -61,6 +65,7 @@ class InstitutRekvizitiSerializer(serializers.ModelSerializer):
     class Meta:
         model = InstitutRekviziti
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -74,6 +79,7 @@ class BankRekvizitiSerializer(serializers.ModelSerializer):
     class Meta:
         model = BankRekviziti
         fields = (
+            'id',
             'name_uz',
             'name_ru',
             'name_en',
@@ -87,6 +93,7 @@ class QabulxonaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Qabulxona
         fields = (
+            'id',
             'fish',
             'telefon_nomer',
             'email',

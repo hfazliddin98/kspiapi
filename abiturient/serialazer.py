@@ -8,6 +8,7 @@ class CallMarkazSerializer(serializers.ModelSerializer):
     class Meta:
         model = CallMarkaz
         fields = ( 
+            'id',
             'title_uz', 
             'title_ru', 
             'title_en', 
@@ -18,23 +19,27 @@ class CallMarkazSerializer(serializers.ModelSerializer):
             'tel_nomer_2',
             'tel_nomer_3',
             'tel_nomer_4',
-            'tel_nomer_5',
+            'tel_nomer_5'
         )
+
 
 class QabulHujjatiSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QabulHujjati
         fields = ( 
+            'id',
             'title', 
             'fayl',             
         )
+
 
 class BakalavrSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bakalavr
         fields = ( 
+            'id',
             'title_uz', 
             'title_ru', 
             'title_en', 
@@ -48,7 +53,8 @@ class MagistrSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Magistr
-        fields = ( 
+        fields = (
+            'id', 
             'title_uz', 
             'title_ru', 
             'title_en', 
