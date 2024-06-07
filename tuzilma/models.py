@@ -32,6 +32,7 @@ class Markaz(models.Model):
 
 class RektoratRahbar(models.Model):
     rektorat_id = models.ForeignKey(Rektorat, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -53,6 +54,7 @@ class RektoratRahbar(models.Model):
 
 class RektoratHodim(models.Model):
     rektorat_rahbar_id = models.ForeignKey(RektoratRahbar, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -62,11 +64,13 @@ class RektoratHodim(models.Model):
     unvon_uz = models.CharField(max_length=255, blank=True)
     unvon_ru = models.CharField(max_length=255, blank=True)
     unvon_en = models.CharField(max_length=255, blank=True)
+    bolim_boshligi = models.BooleanField(default=False)
     telefon_nomer = models.CharField(max_length=255, blank=True)
 
 
 class FakultetRahbar(models.Model):
     fakultet_id = models.ForeignKey(Fakultet, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -88,6 +92,7 @@ class FakultetRahbar(models.Model):
 
 class FakultetHodim(models.Model):
     fakultet_rahbar_id = models.ForeignKey(FakultetRahbar, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -97,11 +102,13 @@ class FakultetHodim(models.Model):
     unvon_uz = models.CharField(max_length=255, blank=True)
     unvon_ru = models.CharField(max_length=255, blank=True)
     unvon_en = models.CharField(max_length=255, blank=True)
+    bolim_boshligi = models.BooleanField(default=False)
     telefon_nomer = models.CharField(max_length=255, blank=True)
 
 
 class KafedraRahbar(models.Model):
     kafedra_id = models.ForeignKey(Kafedra, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -123,6 +130,7 @@ class KafedraRahbar(models.Model):
 
 class KafedraHodim(models.Model):
     kafedra_rahbar_id = models.ForeignKey(KafedraRahbar, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -132,11 +140,13 @@ class KafedraHodim(models.Model):
     unvon_uz = models.CharField(max_length=255, blank=True)
     unvon_ru = models.CharField(max_length=255, blank=True)
     unvon_en = models.CharField(max_length=255, blank=True)
+    bolim_boshligi = models.BooleanField(default=False)
     telefon_nomer = models.CharField(max_length=255, blank=True)
 
 
 class BolimRahbar(models.Model):
     bolim_id = models.ForeignKey(Bolim, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -158,6 +168,7 @@ class BolimRahbar(models.Model):
 
 class BolimHodim(models.Model):
     bolim_rahbar_id = models.ForeignKey(BolimRahbar, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -167,11 +178,13 @@ class BolimHodim(models.Model):
     unvon_uz = models.CharField(max_length=255, blank=True)
     unvon_ru = models.CharField(max_length=255, blank=True)
     unvon_en = models.CharField(max_length=255, blank=True)
+    bolim_boshligi = models.BooleanField(default=False)
     telefon_nomer = models.CharField(max_length=255, blank=True)
 
 
 class MarkazRahbar(models.Model):
     markaz_id = models.ForeignKey(Markaz, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -193,6 +206,7 @@ class MarkazRahbar(models.Model):
 
 class MarkazHodim(models.Model):
     markaz_rahbar_id = models.ForeignKey(MarkazRahbar, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
     lavozim_en = models.CharField(max_length=255, blank=True)
@@ -202,5 +216,6 @@ class MarkazHodim(models.Model):
     unvon_uz = models.CharField(max_length=255, blank=True)
     unvon_ru = models.CharField(max_length=255, blank=True)
     unvon_en = models.CharField(max_length=255, blank=True)
+    bolim_boshligi = models.BooleanField(default=False)
     telefon_nomer = models.CharField(max_length=255, blank=True)
 

@@ -1,41 +1,25 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import CallMarkaz, QabulHujjati, Bakalavr, Magistr
-from .serialazer import CallMarkazSerializer, QabulHujjatiSerializer, BakalavrSerializer, MagistrSerializer
+from .models import CallMarkaz, QabulHujjati, AbiturientBakalavr, AbiturientMagistr
+from .serialazer import CallMarkazSerializer, QabulHujjatiSerializer, AbiturientBakalavrSerializer, AbiturientMagistrSerializer
 
 
 class CallMarkazViewSet(ModelViewSet):
     queryset = CallMarkaz.objects.all()
     serializer_class = CallMarkazSerializer
-    http_method_names = ['get', 'post', 'put', 'delete']
-
-
- 
 
     
 
 class QabulHujjatiViewSet(ModelViewSet):
     queryset = QabulHujjati.objects.all()
     serializer_class = QabulHujjatiSerializer
-    http_method_names = ['get', 'post', 'put', 'delete']
 
 
- 
+class AbiturientBakalavrViewSet(ModelViewSet):
+    queryset = AbiturientBakalavr.objects.all()
+    serializer_class = AbiturientBakalavrSerializer
 
 
-class BakalavrViewSet(ModelViewSet):
-    queryset = Bakalavr.objects.all()
-    serializer_class = BakalavrSerializer
-    http_method_names = ['get', 'post', 'put', 'delete']
-
-
- 
-
-
-class MagistrViewSet(ModelViewSet):
-    queryset = Magistr.objects.all()
-    serializer_class = MagistrSerializer
-    http_method_names = ['get', 'post', 'put', 'delete']
-
-
- 
+class AbiturientMagistrViewSet(ModelViewSet):
+    queryset = AbiturientMagistr.objects.all()
+    serializer_class = AbiturientMagistrSerializer
 

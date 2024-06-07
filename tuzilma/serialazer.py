@@ -1,298 +1,98 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 from .models import Rektorat, Fakultet, Kafedra, Bolim, Markaz
 from .models import RektoratRahbar, FakultetRahbar, KafedraRahbar, BolimRahbar, MarkazRahbar
 from .models import RektoratHodim, FakultetHodim, KafedraHodim, BolimHodim, MarkazHodim
 
 
 
-class RektoratSerializer(serializers.ModelSerializer):
+class RektoratSerializer(ModelSerializer):
     class Meta:
         model = Rektorat
-        fields = (
-            'id',
-            'name_uz',
-            'name_ru',
-            'name_en',
-        )
+        fields = '__all__'
         
 
-class FakultetSerializer(serializers.ModelSerializer):
+class FakultetSerializer(ModelSerializer):
     class Meta:
         model = Fakultet
-        fields = (
-            'id',
-            'name_uz',
-            'name_ru',
-            'name_en',
-        )
+        fields = '__all__'
         
 
-class KafedraSerializer(serializers.ModelSerializer):
+class KafedraSerializer(ModelSerializer):
     class Meta:
         model = Kafedra
-        fields = (
-            'id',
-            'name_uz',
-            'name_ru',
-            'name_en',
-        )
+        fields = '__all__'
         
 
-class BolimSerializer(serializers.ModelSerializer):
+class BolimSerializer(ModelSerializer):
     class Meta:
         model = Bolim
-        fields = (
-            'id',
-            'name_uz',
-            'name_ru',
-            'name_en',
-        )
+        fields = '__all__'
         
 
-class MarkazSerializer(serializers.ModelSerializer):
+class MarkazSerializer(ModelSerializer):
     class Meta:
         model = Markaz
-        fields = (
-            'id',
-            'name_uz',
-            'name_ru',
-            'name_en',
-        )
+        fields = '__all__'
 
-class RektoratRahbarSerializer(serializers.ModelSerializer):
-    rektorat_id = RektoratSerializer()
+class RektoratRahbarSerializer(ModelSerializer):
     class Meta:
         model = RektoratRahbar
-        fields = (
-            'id',
-            'rektorat_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'qabul_soati_uz',
-            'qabul_soati_ru',
-            'qabul_soati_en',
-            'telefon_nomer',
-            'tg_username',
-            'biografiya_uz',
-            'biografiya_ru',
-            'biografiya_en',
-        )
+        fields = '__all__'
         
 
-class FakultetRahbarSerializer(serializers.ModelSerializer):
-    fakultet_id = FakultetSerializer()
+class FakultetRahbarSerializer(ModelSerializer):
     class Meta:
         model = FakultetRahbar
-        fields = (
-            'id',
-            'fakultet_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'qabul_soati_uz',
-            'qabul_soati_ru',
-            'qabul_soati_en',
-            'telefon_nomer',
-            'tg_username',
-            'biografiya_uz',
-            'biografiya_ru',
-            'biografiya_en',
-        )
+        fields = '__all__'
         
 
-class KafedraRahbarSerializer(serializers.ModelSerializer):
-    kafedra_id = KafedraSerializer()
+class KafedraRahbarSerializer(ModelSerializer):
     class Meta:
         model = KafedraRahbar
-        fields = (
-            'id',
-            'kafedra_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'qabul_soati_uz',
-            'qabul_soati_ru',
-            'qabul_soati_en',
-            'telefon_nomer',
-            'tg_username',
-            'biografiya_uz',
-            'biografiya_ru',
-            'biografiya_en',
-        )
+        fields = '__all__'
         
 
-class BolimRahbarSerializer(serializers.ModelSerializer):
-    bolim_id = BolimSerializer()
+class BolimRahbarSerializer(ModelSerializer):
     class Meta:
         model = BolimRahbar
-        fields = (
-            'id',
-            'bolim_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'qabul_soati_uz',
-            'qabul_soati_ru',
-            'qabul_soati_en',
-            'telefon_nomer',
-            'tg_username',
-            'biografiya_uz',
-            'biografiya_ru',
-            'biografiya_en',
-        )
+        fields = '__all__'
         
 
-class MarkazRahbarSerializer(serializers.ModelSerializer):
-    markaz_id = MarkazSerializer()
+class MarkazRahbarSerializer(ModelSerializer):
     class Meta:
         model = MarkazRahbar
-        fields = (
-            'id',
-            'markaz_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'qabul_soati_uz',
-            'qabul_soati_ru',
-            'qabul_soati_en',
-            'telefon_nomer',
-            'tg_username',
-            'biografiya_uz',
-            'biografiya_ru',
-            'biografiya_en',
-        )
+        fields = '__all__'
 
 # Hodimlar
 
-class RektoratHodimSerializer(serializers.ModelSerializer):
-    rektorat_rahbar_id = RektoratRahbarSerializer()
+class RektoratHodimSerializer(ModelSerializer):
     class Meta:
         model = RektoratHodim
-        fields = (
-            'id',
-            'rektorat_rahbar_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'telefon_nomer',
-        )
+        fields = '__all__'
         
 
-class FakultetHodimSerializer(serializers.ModelSerializer):
-    fakultet_rahbar_id = FakultetRahbarSerializer()
+class FakultetHodimSerializer(ModelSerializer):
     class Meta:
         model = FakultetHodim
-        fields = (
-            'id',
-            'fakultet_rahbar_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'telefon_nomer',
-        )
+        fields = '__all__'
         
 
-class KafedraHodimSerializer(serializers.ModelSerializer):
-    kafedra_rahbar_id = KafedraRahbarSerializer()
+class KafedraHodimSerializer(ModelSerializer):
     class Meta:
         model = KafedraHodim
-        fields = (
-            'id',
-            'kafedra_rahbar_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'telefon_nomer',
-        )
+        fields = '__all__'
         
 
-class BolimHodimSerializer(serializers.ModelSerializer):
-    bolim_rahbar_id = BolimRahbarSerializer()
+class BolimHodimSerializer(ModelSerializer):
     class Meta:
         model = BolimHodim
-        fields = (
-            'id',
-            'bolim_rahbar_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'telefon_nomer',
-        )
+        fields = '__all__'
         
 
-class MarkazHodimSerializer(serializers.ModelSerializer):
-    markaz_rahbar_id = MarkazRahbarSerializer()
+class MarkazHodimSerializer(ModelSerializer):
     class Meta:
         model = MarkazHodim
-        fields = (
-            'id',
-            'markaz_rahbar_id',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'fish_uz',
-            'fish_ru',
-            'fish_en',
-            'unvon_uz',
-            'unvon_ru',
-            'unvon_en',
-            'telefon_nomer',
-        )
+        fields = '__all__'
         
 
 

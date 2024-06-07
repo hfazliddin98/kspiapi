@@ -5,12 +5,12 @@ from .views import InstitutHaqidaViewSet, InstitutMalumotlariViewSet, KengashVie
 
 router = SimpleRouter()
 
-router.register('instituthaqida', InstitutHaqidaViewSet, basename='instituthaqida')
-router.register('institutmalumotlari', InstitutMalumotlariViewSet, basename='institutmalumotlari')
+router.register('institut_haqida', InstitutHaqidaViewSet, basename='institut_haqida')
+router.register('institut_malumotlari', InstitutMalumotlariViewSet, basename='institut_malumotlari')
 router.register('kengash', KengashViewSet, basename='kengash')
 router.register('tuzilma', TuzilmaViewSet, basename='tuzilma')
-router.register('institutrekviziti', InstitutRekvizitiViewSet, basename='institutrekviziti')
-router.register('bankrekviziti', BankRekvizitiViewSet, basename='bankrekviziti')
+router.register('institut_rekviziti', InstitutRekvizitiViewSet, basename='institut_rekviziti')
+router.register('bank_rekviziti', BankRekvizitiViewSet, basename='bank_rekviziti')
 router.register('qabulxona', QabulxonaViewSet, basename='qabulxona')
 
 

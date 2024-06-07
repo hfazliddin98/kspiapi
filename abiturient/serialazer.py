@@ -1,5 +1,5 @@
-from rest_framework import serializers # type: ignore
-from .models import CallMarkaz, Bakalavr , Magistr, QabulHujjati
+from rest_framework import serializers 
+from .models import CallMarkaz, AbiturientBakalavr , AbiturientMagistr, QabulHujjati
 
 
 
@@ -34,10 +34,10 @@ class QabulHujjatiSerializer(serializers.ModelSerializer):
         )
 
 
-class BakalavrSerializer(serializers.ModelSerializer):
+class AbiturientBakalavrSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Bakalavr
+        model = AbiturientBakalavr
         fields = ( 
             'id',
             'title_uz', 
@@ -49,10 +49,10 @@ class BakalavrSerializer(serializers.ModelSerializer):
             'rasm'
         )
 
-class MagistrSerializer(serializers.ModelSerializer):
+class AbiturientMagistrSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Magistr
+        model = AbiturientMagistr
         fields = (
             'id', 
             'title_uz', 

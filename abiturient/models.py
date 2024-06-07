@@ -17,7 +17,7 @@ class QabulHujjati(models.Model):
     title = models.CharField(max_length=255, blank=True)
     fayl = models.FileField(upload_to='qabulhujati/', blank=True)
 
-class Bakalavr(models.Model):
+class AbiturientBakalavr(models.Model):
     title_uz = models.CharField(max_length=255, blank=True)
     title_ru = models.CharField(max_length=255, blank=True)
     title_en = models.CharField(max_length=255, blank=True)
@@ -27,7 +27,7 @@ class Bakalavr(models.Model):
     rasm = models.ImageField(upload_to='bakalavr/', blank=True)
     
 
-class Magistr(models.Model):
+class AbiturientMagistr(models.Model):
     title_uz = models.CharField(max_length=255, blank=True)
     title_ru = models.CharField(max_length=255, blank=True)
     title_en = models.CharField(max_length=255, blank=True)

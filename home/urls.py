@@ -9,7 +9,7 @@ router = SimpleRouter()
 
 router.register('yangilik', YangilikViewSet, basename='yangilik')
 router.register('elon', ElonViewSet, basename='elon')
-router.register('galareya/tur', GalareyaTuriViewSet, basename='galareya/tur')
+router.register('galareya_tur', GalareyaTuriViewSet, basename='galareya_tur')
 router.register('galareya', GalareyaViewSet, basename='galareya')
 router.register('fikr', FikrViewSet, basename='fikr')
 router.register('talaba', TalabaViewSet, basename='talaba')
@@ -20,8 +20,8 @@ router.register('videomaruzalar', VideoMaruzalarViewSet, basename='videomaruzala
 router.register('virtualqabulxona', VirtualQabulxonaViewSet, basename='virtualqabulxona')
 router.register('masofaviytalim', MasofaviyTalimViewSet, basename='masofaviytalim')
 router.register('fakultet', FakultetViewSet, basename='fakultet')
-router.register('navbar/name', NavbarNameViewSet, basename='navbarname')
-router.register('navbar/link', NavbarLinkViewSet, basename='navbarlink')
+router.register('navbar_name', NavbarNameViewSet, basename='navbar_name')
+router.register('navbar_link', NavbarLinkViewSet, basename='navbar_link')
 
 
 urlpatterns = []
