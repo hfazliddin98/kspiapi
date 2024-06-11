@@ -1,6 +1,7 @@
 from django.urls import path
-# from .views import home
+from .views import YangilikSearchView, ElonSearchView
 
 urlpatterns = [
-    # path('', home, name='home'),
+    path('yangilik_search/', YangilikSearchView.as_view(), name='yangilik_search'),
+    path('elon_search/', ElonSearchView.as_view(), name='elon_search'),
 ]

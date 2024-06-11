@@ -33,6 +33,7 @@ urlpatterns = [
     path('abiturient/', include('abiturient.urls')),
     path('tuzilma/', include('tuzilma.urls')),
     path('talaba/', include('talaba.urls')),
+    path('users/', include('users.urls')),
   
 
     # swagger

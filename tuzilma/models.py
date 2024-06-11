@@ -20,7 +20,7 @@ class Kafedra(models.Model):
 
 
 class Bolim(models.Model):
-    name_uz = models.CharField(max_length=255, blank=True)
+    name_uz = models.CharField(max_length=255, blank=True) 
     name_ru = models.CharField(max_length=255, blank=True)
     name_en = models.CharField(max_length=255, blank=True)
 
