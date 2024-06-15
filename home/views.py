@@ -1,9 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika, ElektronKutubxona, MasofaviyTalim, VirtualQabulxona, VideoMaruzalar, Fakultet
-from .models import NavbarName, NavbarLink
+from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika, ElektronKutubxona, MasofaviyTalim, VirtualQabulxona, VideoMaruzalar, Boglanish
 from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer, HamkorlarimizSerializer, TalabaSerializer
-from .serialazer import ElektronKutubxonaSerializer, VirtualQabulxonaSerializer, VideoMaruzalarSerializer, MasofaviyTalimSerializer, StatistikaSerializer, FakultetSerializer
-from .serialazer import NavbarNameSerializer, NavbarLinkSerializer
+from .serialazer import ElektronKutubxonaSerializer, VirtualQabulxonaSerializer, VideoMaruzalarSerializer, MasofaviyTalimSerializer, StatistikaSerializer
+from .serialazer import BoglanishSerializer
 
 
 
@@ -79,17 +78,10 @@ class VirtualQabulxonaViewSet(ModelViewSet):
 
 
 
-class FakultetViewSet(ModelViewSet):
-    queryset = Fakultet.objects.all()
-    serializer_class = FakultetSerializer
+class BoglanishViewSet(ModelViewSet):
+    queryset = Boglanish.objects.all()
+    serializer_class = BoglanishSerializer
 
 
-class NavbarNameViewSet(ModelViewSet):
-    queryset = NavbarName.objects.all()
-    serializer_class = NavbarNameSerializer
 
-
-class NavbarLinkViewSet(ModelViewSet):
-    queryset = NavbarLink.objects.all()
-    serializer_class = NavbarLinkSerializer
 

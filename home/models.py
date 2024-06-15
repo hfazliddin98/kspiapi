@@ -143,14 +143,15 @@ class VideoMaruzalar(models.Model):
     video = models.FileField(upload_to='video_maruzalar/', blank=True)
 
 
-class NavbarName(models.Model):
-    name_uz = models.CharField(max_length=255, blank=True)
-    name_ru = models.CharField(max_length=255, blank=True)
-    name_en = models.CharField(max_length=255, blank=True)
+class Boglanish(models.Model):
+    manzil_uz = models.CharField(max_length=255, blank=True)
+    manzil_ru = models.CharField(max_length=255, blank=True)
+    manzil_en = models.CharField(max_length=255, blank=True)
+    telefon = models.CharField(max_length=255, blank=True)
+    email_1 = models.CharField(max_length=255, blank=True)
+    email_2 = models.CharField(max_length=255, blank=True)
 
-class NavbarLink(models.Model):
-    navbar_name_id = models.ForeignKey(NavbarName, on_delete=models.CASCADE)
-    link = models.CharField(max_length=255, blank=True)
+
 
     
 

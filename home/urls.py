@@ -1,8 +1,9 @@
 from django.urls import path
 from rest_framework.routers import SimpleRouter
 from .views import YangilikViewSet, ElonViewSet, GalareyaTuriViewSet, GalareyaViewSet, FikrViewSet, VideoMaruzalarViewSet, MasofaviyTalimViewSet
-from .views import TalabaViewSet, HamkorlarimizViewSet, StatistikaViewSet, ElektronKutubxonaViewSet, VirtualQabulxonaViewSet, FakultetViewSet
-from .views import NavbarNameViewSet, NavbarLinkViewSet
+from .views import TalabaViewSet, HamkorlarimizViewSet, StatistikaViewSet, ElektronKutubxonaViewSet, VirtualQabulxonaViewSet
+from .views import BoglanishViewSet
+
 
 
 router = SimpleRouter()
@@ -19,9 +20,8 @@ router.register('elektronkutubxona', ElektronKutubxonaViewSet, basename='elektro
 router.register('videomaruzalar', VideoMaruzalarViewSet, basename='videomaruzalar')
 router.register('virtualqabulxona', VirtualQabulxonaViewSet, basename='virtualqabulxona')
 router.register('masofaviytalim', MasofaviyTalimViewSet, basename='masofaviytalim')
-router.register('fakultet', FakultetViewSet, basename='fakultet')
-router.register('navbar_name', NavbarNameViewSet, basename='navbar_name')
-router.register('navbar_link', NavbarLinkViewSet, basename='navbar_link')
+router.register('boglanish', BoglanishViewSet, basename='boglanish')
+
 
 
 urlpatterns = []
