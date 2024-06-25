@@ -1,8 +1,10 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import AllowAny
 from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Talaba, Hamkorlarimiz, Statistika, ElektronKutubxona, MasofaviyTalim, VirtualQabulxona, VideoMaruzalar, Boglanish
+from .models import Vakansiya
 from .serialazer import YangilikSerializer, ElonSerializer, GalareyaTuriSerializer, GalareyaSerializer, FikrSerializer, HamkorlarimizSerializer, TalabaSerializer
 from .serialazer import ElektronKutubxonaSerializer, VirtualQabulxonaSerializer, VideoMaruzalarSerializer, MasofaviyTalimSerializer, StatistikaSerializer
-from .serialazer import BoglanishSerializer
+from .serialazer import BoglanishSerializer, VakansiyaSerializer
 
 
 
@@ -73,6 +75,7 @@ class VideoMaruzalarViewSet(ModelViewSet):
 
 
 class VirtualQabulxonaViewSet(ModelViewSet):
+    permission_classes = [AllowAny]
     queryset = VirtualQabulxona.objects.all()
     serializer_class = VirtualQabulxonaSerializer
 
@@ -81,6 +84,11 @@ class VirtualQabulxonaViewSet(ModelViewSet):
 class BoglanishViewSet(ModelViewSet):
     queryset = Boglanish.objects.all()
     serializer_class = BoglanishSerializer
+
+
+class VakansiyaViewSet(ModelViewSet):
+    queryset = Vakansiya.objects.all()
+    serializer_class = VakansiyaSerializer
 
 
 

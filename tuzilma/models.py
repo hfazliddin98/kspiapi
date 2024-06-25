@@ -91,7 +91,7 @@ class FakultetRahbar(models.Model):
 
 
 class FakultetHodim(models.Model):
-    fakultet_rahbar_id = models.ForeignKey(FakultetRahbar, on_delete=models.CASCADE)
+    fakultet_id = models.ForeignKey(Fakultet, on_delete=models.CASCADE)
     rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
@@ -129,7 +129,7 @@ class KafedraRahbar(models.Model):
 
 
 class KafedraHodim(models.Model):
-    kafedra_rahbar_id = models.ForeignKey(KafedraRahbar, on_delete=models.CASCADE)
+    kafedra_id = models.ForeignKey(Kafedra, on_delete=models.CASCADE)
     rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
@@ -167,7 +167,7 @@ class BolimRahbar(models.Model):
 
 
 class BolimHodim(models.Model):
-    bolim_rahbar_id = models.ForeignKey(BolimRahbar, on_delete=models.CASCADE)
+    bolim_id = models.ForeignKey(Bolim, on_delete=models.CASCADE)
     rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)
@@ -205,7 +205,7 @@ class MarkazRahbar(models.Model):
 
 
 class MarkazHodim(models.Model):
-    markaz_rahbar_id = models.ForeignKey(MarkazRahbar, on_delete=models.CASCADE)
+    markaz_id = models.ForeignKey(Markaz, on_delete=models.CASCADE)
     rasm = models.ImageField(upload_to='rahbarlar/')
     lavozim_uz = models.CharField(max_length=255, blank=True)
     lavozim_ru = models.CharField(max_length=255, blank=True)

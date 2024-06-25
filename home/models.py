@@ -136,11 +136,9 @@ class MasofaviyTalim(models.Model):
     link = models.CharField(max_length=255, blank=True)
 
 
-
 class VideoMaruzalar(models.Model):
     fakultet_id = models.ForeignKey(Fakultet, on_delete=models.CASCADE)
     link = models.CharField(max_length=255, blank=True)
-    video = models.FileField(upload_to='video_maruzalar/', blank=True)
 
 
 class Boglanish(models.Model):
@@ -150,6 +148,24 @@ class Boglanish(models.Model):
     telefon = models.CharField(max_length=255, blank=True)
     email_1 = models.CharField(max_length=255, blank=True)
     email_2 = models.CharField(max_length=255, blank=True)
+
+class Vakansiya(models.Model):
+    lavozim_uz = models.CharField(max_length=255, blank=True)
+    lavozim_ru = models.CharField(max_length=255, blank=True)
+    lavozim_en = models.CharField(max_length=255, blank=True)
+    bolim_uz = models.CharField(max_length=255, blank=True)
+    bolim_ru = models.CharField(max_length=255, blank=True)
+    bolim_en = models.CharField(max_length=255, blank=True)
+    sana = models.CharField(max_length=255, blank=True)
+    stavka_uz = models.CharField(max_length=255, blank=True)
+    stavka_ru = models.CharField(max_length=255, blank=True)
+    stavka_en = models.CharField(max_length=255, blank=True)
+    oylik_uz = models.CharField(max_length=255, blank=True)
+    oylik_ru = models.CharField(max_length=255, blank=True)
+    oylik_en = models.CharField(max_length=255, blank=True)
+    malakaviy_talablar_uz = models.TextField(blank=True)
+    malakaviy_talablar_ru = models.TextField(blank=True)
+    malakaviy_talablar_en = models.TextField(blank=True)
 
 
 

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'abiturient',
     'tuzilma',
     'talaba',
+    'faoliyat',
 ]
 
 MIDDLEWARE = [

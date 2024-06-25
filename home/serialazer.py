@@ -1,6 +1,6 @@
 from rest_framework import serializers # type: ignore
 from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Statistika, Hamkorlarimiz, Talaba, ElektronKutubxona, VideoMaruzalar, VirtualQabulxona, MasofaviyTalim
-from .models import Boglanish
+from .models import Boglanish, Vakansiya
 from tuzilma.models import Fakultet
 from tuzilma.serialazer import FakultetSerializer
 
@@ -74,16 +74,22 @@ class MasofaviyTalimSerializer(serializers.ModelSerializer):
 
 
 class VideoMaruzalarSerializer(serializers.ModelSerializer):
-    fakultet_id = FakultetSerializer()
 
     class Meta:
         model = VideoMaruzalar
-        fields = ('id', 'link', 'video', 'fakultet_id')
+        fields = '__all__'
 
 
 class BoglanishSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Boglanish
+        fields = '__all__'
+
+
+class VakansiyaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Vakansiya
         fields = '__all__'
 

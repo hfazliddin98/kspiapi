@@ -34,6 +34,7 @@ urlpatterns = [
     path('tuzilma/', include('tuzilma.urls')),
     path('talaba/', include('talaba.urls')),
     path('users/', include('users.urls')),
+    path('faoliyat/', include('faoliyat.urls')),
   
 
     # swagger
