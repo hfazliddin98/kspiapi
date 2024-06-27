@@ -30,6 +30,7 @@ class Kengash(models.Model):
     email = models.EmailField(max_length=255, blank=True)
     kengash_vazifasi = models.TextField(blank=True)
     kengash_haqida = models.TextField(blank=True)
+    rasm = models.ImageField(upload_to='kengash/', blank=True)
 
 
 class Tuzilma(models.Model):
