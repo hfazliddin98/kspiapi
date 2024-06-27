@@ -100,10 +100,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3001",  # Frontend domaingizni qo'shing
     "http://192.168.0.5",     # Mavjud bo'lgan boshqa domaingizni qo'shing
     "https://192.168.0.5",
-    "http://192.168.0.49",     
-    "https://192.168.0.49",
-    "http://yangi.kspi.uz",     
-    "https://yangi.kspi.uz",
     "http://kspi.uz",     
     "https://kspi.uz",
     "http://kspiadmin.kspi.uz",     
