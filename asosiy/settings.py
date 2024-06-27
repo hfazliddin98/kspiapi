@@ -162,8 +162,8 @@ SIMPLE_JWT = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kspi_api',
-        'USER': 'kspi_apiuser',
+        'NAME': 'kspiapi',
+        'USER': 'kspiapiuser',
         'PASSWORD': 'kspi@2024',
         'HOST': 'localhost',
         'PORT': '',
