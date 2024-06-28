@@ -1,6 +1,8 @@
 from rest_framework import serializers # type: ignore
 from .models import TalabaBakalavr, TalabaMagistr
 from .models import BakalavrMalakaTalabi, BakalavrOquvRejaTuri, BakalavrOquvReja, BakalavrFanDasturTuri, BakalavrFanDastur, BakalavrFanKatalogi
+from  .models import TTJAriza, TTJCampus, TTJRahbar, TTJStatistika
+
 
 
 
@@ -59,4 +61,28 @@ class BakalavrFanKatalogiSerializer(serializers.ModelSerializer):
         model = BakalavrFanKatalogi
         fields = '__all__'
 
+
+class TTJArizaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TTJAriza
+        fields = '__all__'
+
+class TTJCampusSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TTJCampus
+        fields = '__all__'
+
+class TTJRahbarSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TTJRahbar
+        fields = '__all__'
+
+class TTJStatistikaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TTJStatistika
+        fields = '__all__'
 

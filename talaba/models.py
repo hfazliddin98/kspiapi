@@ -59,3 +59,43 @@ class BakalavrFanKatalogi(models.Model):
     name_en = models.CharField(max_length=255, blank=True)
     fayl = models.FileField(upload_to='fan_katalogi/')
     sana = models.CharField(max_length=255, blank=True)
+
+
+
+class TTJRahbar(models.Model):
+    title_uz = models.CharField(max_length=255, blank=True)
+    title_ru = models.CharField(max_length=255, blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    body_uz = models.CharField(max_length=255, blank=True)
+    body_ru = models.CharField(max_length=255, blank=True)
+    body_en = models.CharField(max_length=255, blank=True)
+    rasm = models.ImageField(upload_to='ttjrahbar', blank=True)
+    rahbar_fish = models.CharField(max_length=255, blank=True)
+
+class TTJStatistika(models.Model):
+    talabalar = models.CharField(max_length=255, blank=True)
+    xonalar = models.CharField(max_length=255, blank=True)
+    binolar = models.CharField(max_length=255, blank=True)
+
+class TTJAriza(models.Model):
+    link_1_title_uz = models.CharField(max_length=255, blank=True)
+    link_1_title_ru = models.CharField(max_length=255, blank=True)
+    link_1_title_en = models.CharField(max_length=255, blank=True)
+    link_1 = models.CharField(max_length=255, blank=True)
+    link_2_title_uz = models.CharField(max_length=255, blank=True)
+    link_2_title_ru = models.CharField(max_length=255, blank=True)
+    link_2_title_en = models.CharField(max_length=255, blank=True)
+    link_2 = models.CharField(max_length=255, blank=True)
+    link_3_title_uz = models.CharField(max_length=255, blank=True)
+    link_3_title_ru = models.CharField(max_length=255, blank=True)
+    link_3_title_en = models.CharField(max_length=255, blank=True)
+    link_3 = models.CharField(max_length=255, blank=True)
+
+class TTJCampus(models.Model):
+    title_uz = models.CharField(max_length=255, blank=True)
+    title_ru = models.CharField(max_length=255, blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    body_uz = models.CharField(max_length=255, blank=True)
+    body_ru = models.CharField(max_length=255, blank=True)
+    body_en = models.CharField(max_length=255, blank=True)
+    rasm = models.ImageField(upload_to='ttjcampus', blank=True)
