@@ -35,4 +35,17 @@ class AbiturientMagistr(models.Model):
     body_ru = models.TextField(blank=True)
     body_en = models.TextField(blank=True)
     rasm = models.ImageField(upload_to='magistr/', blank=True)
-    
+
+
+class BaxoMezoni(models.Model):
+    title_uz = models.CharField(max_length=255, blank=True)
+    title_ru = models.CharField(max_length=255, blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mezon', blank=True)
+
+
+class Kvota(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mezon', blank=True)
