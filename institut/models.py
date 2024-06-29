@@ -25,11 +25,17 @@ class InstitutMalumotlari(models.Model):
 
 
 class Kengash(models.Model):
-    fish = models.CharField(max_length=255, blank=True)
+    fish_uz = models.CharField(max_length=255, blank=True)
+    fish_ru = models.CharField(max_length=255, blank=True)
+    fish_en = models.CharField(max_length=255, blank=True)
     telefon = models.CharField(max_length=255, blank=True)
     email = models.EmailField(max_length=255, blank=True)
-    kengash_vazifasi = models.TextField(blank=True)
-    kengash_haqida = models.TextField(blank=True)
+    kengash_vazifasi_uz = models.TextField(blank=True)
+    kengash_vazifasi_ru = models.TextField(blank=True)
+    kengash_vazifasi_en = models.TextField(blank=True)
+    kengash_haqida_uz = models.TextField(blank=True)
+    kengash_haqida_ru = models.TextField(blank=True)
+    kengash_haqida_en = models.TextField(blank=True)
     rasm = models.ImageField(upload_to='kengash/', blank=True)
 
 
