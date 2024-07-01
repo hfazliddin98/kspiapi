@@ -2,7 +2,7 @@ from django.urls import path
 from rest_framework.routers import SimpleRouter
 from .views import YangilikViewSet, ElonViewSet, GalareyaTuriViewSet, GalareyaViewSet, FikrViewSet, VideoMaruzalarViewSet, MasofaviyTalimViewSet
 from .views import TalabaViewSet, HamkorlarimizViewSet, StatistikaViewSet, ElektronKutubxonaViewSet, VirtualQabulxonaViewSet
-from .views import BoglanishViewSet, VakansiyaViewSet
+from .views import BoglanishViewSet, VakansiyaViewSet, EfirNameViewSet, EfirViewSet
 
 
 
@@ -22,6 +22,9 @@ router.register('virtualqabulxona', VirtualQabulxonaViewSet, basename='virtualqa
 router.register('masofaviytalim', MasofaviyTalimViewSet, basename='masofaviytalim')
 router.register('boglanish', BoglanishViewSet, basename='boglanish')
 router.register('vakansiya', VakansiyaViewSet, basename='vakansiya')
+router.register('efir_name', EfirNameViewSet, basename='efir_name')
+router.register('efir', EfirViewSet, basename='efir')
+
 
 
 urlpatterns = []

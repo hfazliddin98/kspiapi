@@ -1,6 +1,6 @@
 from rest_framework import serializers # type: ignore
 from .models import Yangilik, Elon, GalareyaTuri, Galareya, Fikr, Statistika, Hamkorlarimiz, Talaba, ElektronKutubxona, VideoMaruzalar, VirtualQabulxona, MasofaviyTalim
-from .models import Boglanish, Vakansiya
+from .models import Boglanish, Vakansiya, EfirName ,Efir
 from tuzilma.models import Fakultet
 from tuzilma.serialazer import FakultetSerializer
 
@@ -93,3 +93,16 @@ class VakansiyaSerializer(serializers.ModelSerializer):
         model = Vakansiya
         fields = '__all__'
 
+
+class EfirNameSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EfirName
+        fields = '__all__'
+
+
+class EfirSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Efir
+        fields = '__all__'

@@ -167,6 +167,17 @@ class Vakansiya(models.Model):
     malakaviy_talablar_ru = models.TextField(blank=True)
     malakaviy_talablar_en = models.TextField(blank=True)
 
+class EfirName(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
+class Efir(models.Model):
+    efirname_id = models.ForeignKey(EfirName, on_delete=models.CASCADE)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    link = models.TextField(blank=True)
 
 
     
