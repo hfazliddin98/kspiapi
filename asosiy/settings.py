@@ -95,16 +95,47 @@ REST_FRAMEWORK = {
 
 }
 
+
+CORS_ALLOW_ALL_ORIGINS = False # True bolsa  CORS_ALLOWED_ORIGINS ishlamay qoladi
+CORS_ALLOW_CREDENTIALS = True
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Frontend domaingizni qo'shing
     "http://localhost:3001",  # Frontend domaingizni qo'shing
-    "http://192.168.0.5",     # Mavjud bo'lgan boshqa domaingizni qo'shing
-    "https://192.168.0.5",
     "http://kspi.uz",     
     "https://kspi.uz",
     "http://kspiadmin.kspi.uz",     
     "https://kspiadmin.kspi.uz",
 ]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    "http://localhost:3000",  # Frontend domaingizni qo'shing
+    "http://localhost:3001",  # Frontend domaingizni qo'shing
+    "http://kspi.uz",     
+    "https://kspi.uz",
+    "http://kspiadmin.kspi.uz",     
+    "https://kspiadmin.kspi.uz",
+]
+
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",  # Frontend domaingizni qo'shing
+    "http://localhost:3001",  # Frontend domaingizni qo'shing
+    "http://kspi.uz",     
+    "https://kspi.uz",
+    "http://kspiadmin.kspi.uz",     
+    "https://kspiadmin.kspi.uz",
+)
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",  # Frontend domaingizni qo'shing
+    "http://localhost:3001",  # Frontend domaingizni qo'shing
+    "http://kspi.uz",     
+    "https://kspi.uz",
+    "http://kspiadmin.kspi.uz",     
+    "https://kspiadmin.kspi.uz",
+]
+
+CORS_ALLOW_HEADERS = ['*']
 
 
 
