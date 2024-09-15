@@ -40,7 +40,21 @@ class BakalavrOquvReja(models.Model):
     fayl = models.FileField(upload_to='oquv_reja/')
     sana = models.CharField(max_length=255, blank=True)
 
+
+
+class BakalavrFanDasturKurs(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
+class BakalavrFanDasturYonalish(models.Model):
+    fan_dastur_kurs_id = models.ForeignKey(BakalavrFanDasturKurs, on_delete=models.CASCADE)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
 class BakalavrFanDasturTuri(models.Model):
+    fan_dastur_yonalish_id = models.ForeignKey(BakalavrFanDasturYonalish, on_delete=models.CASCADE)
     name_uz = models.CharField(max_length=255, blank=True)
     name_ru = models.CharField(max_length=255, blank=True)
     name_en = models.CharField(max_length=255, blank=True)
@@ -82,7 +96,22 @@ class MagistrOquvReja(models.Model):
     fayl = models.FileField(upload_to='oquv_reja/')
     sana = models.CharField(max_length=255, blank=True)
 
+
+
+
+class MagistrFanDasturKurs(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
+class MagistrFanDasturYonalish(models.Model):
+    fan_dastur_kurs_id = models.ForeignKey(MagistrFanDasturKurs, on_delete=models.CASCADE)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
 class MagistrFanDasturTuri(models.Model):
+    fan_dastur_yonalish_id = models.ForeignKey(MagistrFanDasturYonalish, on_delete=models.CASCADE)
     name_uz = models.CharField(max_length=255, blank=True)
     name_ru = models.CharField(max_length=255, blank=True)
     name_en = models.CharField(max_length=255, blank=True)

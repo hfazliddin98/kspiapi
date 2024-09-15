@@ -3,12 +3,16 @@ from rest_framework.viewsets import ModelViewSet
 from  .models import TTJAriza, TTJCampus, TTJRahbar, TTJStatistika
 from .models import TalabaBakalavr, TalabaMagistr
 from .models import BakalavrMalakaTalabi, BakalavrOquvRejaTuri, BakalavrOquvReja, BakalavrFanDasturTuri, BakalavrFanDastur, BakalavrFanKatalogi
+from .models import BakalavrFanDasturKurs, BakalavrFanDasturYonalish
 from .models import MagistrMalakaTalabi, MagistrOquvRejaTuri, MagistrOquvReja, MagistrFanDasturTuri, MagistrFanDastur, MagistrFanKatalogi
+from .models import MagistrFanDasturKurs, MagistrFanDasturYonalish
 from .serialazer import TalabaBakalavrSerializer, TalabaMagistrSerializer
 from .serialazer import BakalavrMalakaTalabiSerializer, BakalavrOquvRejaTuriSerializer, BakalavrOquvRejaSerializer
 from .serialazer import BakalavrFanDasturTuriSerializer, BakalavrFanDasturSerializer, BakalavrFanKatalogiSerializer
+from .serialazer import BakalavrFanDasturKursSerializer, BakalavrFanDasturYonalishSerializer
 from .serialazer import MagistrMalakaTalabiSerializer, MagistrOquvRejaTuriSerializer, MagistrOquvRejaSerializer
 from .serialazer import MagistrFanDasturTuriSerializer, MagistrFanDasturSerializer, MagistrFanKatalogiSerializer
+from .serialazer import MagistrFanDasturKursSerializer, MagistrFanDasturYonalishSerializer
 from  .serialazer import TTJArizaSerializer, TTJCampusSerializer, TTJRahbarSerializer, TTJStatistikaSerializer
 
 
@@ -42,6 +46,16 @@ class BakalavrOquvRejaViewSet(ModelViewSet):
     serializer_class = BakalavrOquvRejaSerializer
 
 
+class BakalavrFanDasturKursViewSet(ModelViewSet):
+    queryset = BakalavrFanDasturKurs.objects.all()
+    serializer_class = BakalavrFanDasturKursSerializer
+
+
+class BakalavrFanDasturYonalishViewSet(ModelViewSet):
+    queryset = BakalavrFanDasturYonalish.objects.all()
+    serializer_class = BakalavrFanDasturYonalishSerializer
+
+
 class BakalavrFanDasturTuriViewSet(ModelViewSet):
     queryset = BakalavrFanDasturTuri.objects.all()
     serializer_class = BakalavrFanDasturTuriSerializer
@@ -73,6 +87,16 @@ class MagistrOquvRejaTuriViewSet(ModelViewSet):
 class MagistrOquvRejaViewSet(ModelViewSet):
     queryset = MagistrOquvReja.objects.all()
     serializer_class = MagistrOquvRejaSerializer
+
+
+class MagistrFanDasturKursViewSet(ModelViewSet):
+    queryset = MagistrFanDasturKurs.objects.all()
+    serializer_class = MagistrFanDasturKursSerializer
+
+
+class MagistrFanDasturYonalishViewSet(ModelViewSet):
+    queryset = MagistrFanDasturYonalish.objects.all()
+    serializer_class = MagistrFanDasturYonalishSerializer
 
 
 class MagistrFanDasturTuriViewSet(ModelViewSet):

@@ -1,7 +1,9 @@
 from rest_framework import serializers # type: ignore
 from .models import TalabaBakalavr, TalabaMagistr
 from .models import BakalavrMalakaTalabi, BakalavrOquvRejaTuri, BakalavrOquvReja, BakalavrFanDasturTuri, BakalavrFanDastur, BakalavrFanKatalogi
+from .models import BakalavrFanDasturKurs, BakalavrFanDasturYonalish
 from .models import MagistrMalakaTalabi, MagistrOquvRejaTuri, MagistrOquvReja, MagistrFanDasturTuri, MagistrFanDastur, MagistrFanKatalogi
+from .models import MagistrFanDasturKurs, MagistrFanDasturYonalish
 from  .models import TTJAriza, TTJCampus, TTJRahbar, TTJStatistika
 
 
@@ -41,6 +43,20 @@ class BakalavrOquvRejaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BakalavrOquvReja
+        fields = '__all__'
+
+
+class BakalavrFanDasturKursSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BakalavrFanDasturKurs
+        fields = '__all__'
+
+
+class BakalavrFanDasturYonalishSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BakalavrFanDasturYonalish
         fields = '__all__'
 
 
@@ -89,6 +105,20 @@ class MagistrOquvRejaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MagistrOquvReja
+        fields = '__all__'
+
+
+class MagistrFanDasturKursSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrFanDasturKurs
+        fields = '__all__'
+
+
+class MagistrFanDasturYonalishSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrFanDasturYonalish
         fields = '__all__'
 
 
