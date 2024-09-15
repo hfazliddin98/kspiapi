@@ -1,6 +1,7 @@
 from rest_framework import serializers # type: ignore
 from .models import TalabaBakalavr, TalabaMagistr
 from .models import BakalavrMalakaTalabi, BakalavrOquvRejaTuri, BakalavrOquvReja, BakalavrFanDasturTuri, BakalavrFanDastur, BakalavrFanKatalogi
+from .models import MagistrMalakaTalabi, MagistrOquvRejaTuri, MagistrOquvReja, MagistrFanDasturTuri, MagistrFanDastur, MagistrFanKatalogi
 from  .models import TTJAriza, TTJCampus, TTJRahbar, TTJStatistika
 
 
@@ -18,6 +19,8 @@ class TalabaMagistrSerializer(serializers.ModelSerializer):
     class Meta:
         model = TalabaMagistr
         fields = '__all__'
+
+
 
 
 class BakalavrMalakaTalabiSerializer(serializers.ModelSerializer):
@@ -60,6 +63,58 @@ class BakalavrFanKatalogiSerializer(serializers.ModelSerializer):
     class Meta:
         model = BakalavrFanKatalogi
         fields = '__all__'
+
+
+
+
+
+
+
+
+class MagistrMalakaTalabiSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrMalakaTalabi
+        fields = '__all__'
+
+
+class MagistrOquvRejaTuriSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrOquvRejaTuri
+        fields = '__all__'
+
+
+class MagistrOquvRejaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrOquvReja
+        fields = '__all__'
+
+
+class MagistrFanDasturTuriSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrFanDasturTuri
+        fields = '__all__'
+
+
+class MagistrFanDasturSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrFanDastur
+        fields = '__all__'
+
+
+class MagistrFanKatalogiSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagistrFanKatalogi
+        fields = '__all__'
+
+
+
+
 
 
 class TTJArizaSerializer(serializers.ModelSerializer):

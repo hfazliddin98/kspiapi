@@ -59,6 +59,49 @@ class BakalavrFanKatalogi(models.Model):
     name_en = models.CharField(max_length=255, blank=True)
     fayl = models.FileField(upload_to='fan_katalogi/')
     sana = models.CharField(max_length=255, blank=True)
+    
+
+
+class MagistrMalakaTalabi(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='malaka_talab/')
+    sana = models.CharField(max_length=255, blank=True)
+
+class MagistrOquvRejaTuri(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
+class MagistrOquvReja(models.Model):
+    oquv_reja_turi_id = models.ForeignKey(MagistrOquvRejaTuri, on_delete=models.CASCADE)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='oquv_reja/')
+    sana = models.CharField(max_length=255, blank=True)
+
+class MagistrFanDasturTuri(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
+class MagistrFanDastur(models.Model):
+    fan_dastur_turi_id = models.ForeignKey(MagistrFanDasturTuri, on_delete=models.CASCADE)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='fan_dastur/')
+    sana = models.CharField(max_length=255, blank=True)
+
+class MagistrFanKatalogi(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='fan_katalogi/')
+    sana = models.CharField(max_length=255, blank=True)
+
 
 
 

@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from .models import CallMarkaz, QabulHujjati, AbiturientBakalavr, AbiturientMagistr
-from .models import BaxoMezoni, Kvota
-from .serialazer import BaxoMezoniSerializer, KvotaSerializer
+from .models import BaxoMezoni, Kvota, OtishBallari
+from .serialazer import BaxoMezoniSerializer, KvotaSerializer, OtishBallariSerializer
 from .serialazer import CallMarkazSerializer, QabulHujjatiSerializer, AbiturientBakalavrSerializer, AbiturientMagistrSerializer
 
 
@@ -33,3 +33,8 @@ class BaxoMezoniViewSet(ModelViewSet):
 class KvotaViewSet(ModelViewSet):
     queryset = Kvota.objects.all()
     serializer_class = KvotaSerializer
+
+
+class OtishBallariViewSet(ModelViewSet):
+    queryset = OtishBallari.objects.all()
+    serializer_class = OtishBallariSerializer

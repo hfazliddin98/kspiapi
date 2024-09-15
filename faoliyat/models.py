@@ -50,3 +50,23 @@ class Yoshlar(models.Model):
     body_ru = models.TextField(blank=True)
     body_en = models.TextField(blank=True)
 
+
+class NormativHujatlar(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')
+
+
+class IchkiIdoraviyHujatlar(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')
+
+
+class XabarBerish(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')

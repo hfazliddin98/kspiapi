@@ -49,3 +49,10 @@ class Kvota(models.Model):
     name_ru = models.CharField(max_length=255, blank=True)
     name_en = models.CharField(max_length=255, blank=True)
     fayl = models.FileField(upload_to='mezon', blank=True)
+
+
+class OtishBallari(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='otishballari', blank=True)

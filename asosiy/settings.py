@@ -96,44 +96,44 @@ REST_FRAMEWORK = {
 }
 
 
-CORS_ALLOW_ALL_ORIGINS = False # True bolsa  CORS_ALLOWED_ORIGINS ishlamay qoladi
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True # True bolsa  CORS_ALLOWED_ORIGINS ishlamay qoladi
+# CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Frontend domaingizni qo'shing
-    "http://localhost:3001",  # Frontend domaingizni qo'shing
-    "http://kspi.uz",     
-    "https://kspi.uz",
-    "http://kspiadmin.kspi.uz",     
-    "https://kspiadmin.kspi.uz",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # Frontend domaingizni qo'shing
+#     "http://localhost:3001",  # Frontend domaingizni qo'shing
+#     "http://kspi.uz",     
+#     "https://kspi.uz",
+#     "http://kspiadmin.kspi.uz",     
+#     "https://kspiadmin.kspi.uz",
+# ]
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    "http://localhost:3000",  # Frontend domaingizni qo'shing
-    "http://localhost:3001",  # Frontend domaingizni qo'shing
-    "http://kspi.uz",     
-    "https://kspi.uz",
-    "http://kspiadmin.kspi.uz",     
-    "https://kspiadmin.kspi.uz",
-]
+# CORS_ALLOWED_ORIGIN_REGEXES = [
+#     "http://localhost:3000",  # Frontend domaingizni qo'shing
+#     "http://localhost:3001",  # Frontend domaingizni qo'shing
+#     "http://kspi.uz",     
+#     "https://kspi.uz",
+#     "http://kspiadmin.kspi.uz",     
+#     "https://kspiadmin.kspi.uz",
+# ]
 
-CORS_ORIGIN_WHITELIST = (
-    "http://localhost:3000",  # Frontend domaingizni qo'shing
-    "http://localhost:3001",  # Frontend domaingizni qo'shing
-    "http://kspi.uz",     
-    "https://kspi.uz",
-    "http://kspiadmin.kspi.uz",     
-    "https://kspiadmin.kspi.uz",
-)
+# CORS_ORIGIN_WHITELIST = (
+#     "http://localhost:3000",  # Frontend domaingizni qo'shing
+#     "http://localhost:3001",  # Frontend domaingizni qo'shing
+#     "http://kspi.uz",     
+#     "https://kspi.uz",
+#     "http://kspiadmin.kspi.uz",     
+#     "https://kspiadmin.kspi.uz",
+# )
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",  # Frontend domaingizni qo'shing
-    "http://localhost:3001",  # Frontend domaingizni qo'shing
-    "http://kspi.uz",     
-    "https://kspi.uz",
-    "http://kspiadmin.kspi.uz",     
-    "https://kspiadmin.kspi.uz",
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     "http://localhost:3000",  # Frontend domaingizni qo'shing
+#     "http://localhost:3001",  # Frontend domaingizni qo'shing
+#     "http://kspi.uz",     
+#     "https://kspi.uz",
+#     "http://kspiadmin.kspi.uz",     
+#     "https://kspiadmin.kspi.uz",
+# ]
 
 CORS_ALLOW_HEADERS = ['*']
 
@@ -190,21 +190,8 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'kspiapi',
-#         'USER': 'kspiapiuser',
-#         'PASSWORD': 'kspi@2024',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
 
 
-
-
-# Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

@@ -1,6 +1,6 @@
 from rest_framework import serializers 
 from .models import CallMarkaz, AbiturientBakalavr , AbiturientMagistr, QabulHujjati
-from .models import BaxoMezoni, Kvota
+from .models import BaxoMezoni, Kvota, OtishBallari
 
 
 
@@ -42,4 +42,11 @@ class KvotaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Kvota
+        fields = '__all__'
+
+
+class OtishBallariSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OtishBallari
         fields = '__all__'

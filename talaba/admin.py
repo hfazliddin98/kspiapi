@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import BakalavrFanDasturTuri, BakalavrFanDastur, MagistrFanDasturTuri, MagistrFanDastur
 
-# Register your models here.
+admin.site.register([BakalavrFanDasturTuri, BakalavrFanDastur, MagistrFanDasturTuri, MagistrFanDastur])

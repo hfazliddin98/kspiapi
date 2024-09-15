@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
-from .models import Jamoatchilik, Madaniy, Oquv, Akademik, Ilmiy, Yoshlar
+from .models import Jamoatchilik, Madaniy, Oquv, Akademik, Ilmiy, Yoshlar, NormativHujatlar, IchkiIdoraviyHujatlar, XabarBerish
 from .serialazer import JamoatchilikSerializer, MadaniySerializer, OquvSerializer, AkademikSerializer, IlmiySerializer, YoshlarSerializer
+from .serialazer import NormativHujatlarSerializer, IchkiIdoraviyHujatlarSerializer, XabarBerishSerializer
 
 
 
@@ -33,4 +34,19 @@ class IlmiyViewSet(ModelViewSet):
 class YoshlarViewSet(ModelViewSet):
     queryset = Yoshlar.objects.all()
     serializer_class = YoshlarSerializer
+
+
+class NormativHujatlarViewSet(ModelViewSet):
+    queryset = NormativHujatlar.objects.all()
+    serializer_class = NormativHujatlarSerializer
+
+
+class IchkiIdoraviyHujatlarViewSet(ModelViewSet):
+    queryset = IchkiIdoraviyHujatlar.objects.all()
+    serializer_class = IchkiIdoraviyHujatlarSerializer
+
+
+class XabarBerishViewSet(ModelViewSet):
+    queryset = XabarBerish.objects.all()
+    serializer_class = XabarBerishSerializer
 
