@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import AllowAny
 from .models import InstitutHaqida, InstitutMalumotlari, Kengash, Tuzilma,InstitutRekviziti, BankRekviziti, Qabulxona
 from .serialazer import InstitutHaqidaSerializer, InstitutMalumotlariSerializer, KengashSerializer, TuzilmaSerializer
 from .serialazer import InstitutRekvizitiSerializer, BankRekvizitiSerializer, QabulxonaSerializer
@@ -38,5 +39,6 @@ class BankRekvizitiViewSet(ModelViewSet):
 class QabulxonaViewSet(ModelViewSet):
     queryset = Qabulxona.objects.all()
     serializer_class = QabulxonaSerializer
+    permission_classes = [AllowAny]
 
 

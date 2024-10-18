@@ -2,7 +2,7 @@ from rest_framework.routers import SimpleRouter
 from .views import TalabaBakalavrViewSet, TalabaMagistrViewSet
 from .views import BakalavrMalakaTalabiViewSet, BakalavrOquvRejaTuriViewSet, BakalavrOquvRejaViewSet
 from .views import BakalavrFanDasturTuriViewSet, BakalavrFanDasturViewSet, BakalavrFanKatalogiViewSet
-from .views import BakalavrFanDasturKursViewSet, BakalavrFanDasturYonalishViewSet
+from .views import BakalavrFanDasturKursViewSet, BakalavrFanDasturYonalishViewSet, BakalavrFanDasturTalimTuriViewSet
 from .views import MagistrMalakaTalabiViewSet, MagistrOquvRejaTuriViewSet, MagistrOquvRejaViewSet
 from .views import MagistrFanDasturTuriViewSet, MagistrFanDasturViewSet, MagistrFanKatalogiViewSet
 from .views import MagistrFanDasturKursViewSet, MagistrFanDasturYonalishViewSet
@@ -18,6 +18,7 @@ router.register('bakalavr_malaka_talab', BakalavrMalakaTalabiViewSet, basename='
 router.register('bakalavr_oquv_reja_tur', BakalavrOquvRejaTuriViewSet, basename='bakalavr_oquv_reja_tur')
 router.register('bakalavr_oquv_reja', BakalavrOquvRejaViewSet, basename='bakalavr_oquv_reja')
 router.register('bakalavr_fan_dastur_kurs', BakalavrFanDasturKursViewSet, basename='bakalavr_fan_dastur_kurs')
+router.register('bakalavr_fan_dastur_talim_turi', BakalavrFanDasturTalimTuriViewSet, basename='bakalavr_fan_dastur_talim_turi')
 router.register('bakalavr_fan_dastur_yonalish', BakalavrFanDasturYonalishViewSet, basename='bakalavr_fan_dastur_yonalish')
 router.register('bakalavr_fan_dastur_tur', BakalavrFanDasturTuriViewSet, basename='bakalavr_fan_dastur_tur')
 router.register('bakalavr_fan_dastur', BakalavrFanDasturViewSet, basename='bakalavr_fan_dastur')

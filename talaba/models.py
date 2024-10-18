@@ -47,8 +47,15 @@ class BakalavrFanDasturKurs(models.Model):
     name_ru = models.CharField(max_length=255, blank=True)
     name_en = models.CharField(max_length=255, blank=True)
 
-class BakalavrFanDasturYonalish(models.Model):
+class BakalavrFanDasturTalimTuri(models.Model):
     fan_dastur_kurs_id = models.ForeignKey(BakalavrFanDasturKurs, on_delete=models.CASCADE)
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+
+
+class BakalavrFanDasturYonalish(models.Model):
+    fan_dastur_talim_turi_id = models.ForeignKey(BakalavrFanDasturTalimTuri, on_delete=models.CASCADE)
     name_uz = models.CharField(max_length=255, blank=True)
     name_ru = models.CharField(max_length=255, blank=True)
     name_en = models.CharField(max_length=255, blank=True)
@@ -76,6 +83,11 @@ class BakalavrFanKatalogi(models.Model):
     
 
 
+
+
+
+
+
 class MagistrMalakaTalabi(models.Model):
     name_uz = models.CharField(max_length=255, blank=True)
     name_ru = models.CharField(max_length=255, blank=True)
@@ -95,8 +107,6 @@ class MagistrOquvReja(models.Model):
     name_en = models.CharField(max_length=255, blank=True)
     fayl = models.FileField(upload_to='oquv_reja/')
     sana = models.CharField(max_length=255, blank=True)
-
-
 
 
 class MagistrFanDasturKurs(models.Model):
