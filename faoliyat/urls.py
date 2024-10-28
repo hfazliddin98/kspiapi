@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.routers import SimpleRouter
 from .views import JamoatchilikViewSet, MadaniyViewSet, OquvViewSet, AkademikViewSet, IlmiyViewSet, YoshlarViewSet
-from .views import  NormativHujatlarViewSet, IchkiIdoraviyHujatlarViewSet, XabarBerishViewSet
+from .views import  NormativHujatlarViewSet, IchkiIdoraviyHujatlarViewSet, XabarBerishViewSet, XalqaroProfesorlarFikriViewSet
 
 
 
@@ -16,6 +16,7 @@ router.register('yoshlar', YoshlarViewSet, basename='yoshlar')
 router.register('normativ_hujatlar', NormativHujatlarViewSet, basename='normativ_hujatlar')
 router.register('ichki_idoraviy_hujatlar', IchkiIdoraviyHujatlarViewSet, basename='ichki_idoraviy_hujatlar')
 router.register('xabar_berish', XabarBerishViewSet, basename='xabar_berish')
+router.register('xalqaro_profesor_fikri', XalqaroProfesorlarFikriViewSet, basename='xalqaro_profesor_fikri')
 
 
 
