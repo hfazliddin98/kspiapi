@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from .models import InstitutHaqida, InstitutMalumotlari, Kengash, Tuzilma, InstitutRekviziti, BankRekviziti, Qabulxona
+from .models import KorupsiyagaXabar
+
 
 class InstitutHaqidaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -37,5 +39,11 @@ class BankRekvizitiSerializer(serializers.ModelSerializer):
 class QabulxonaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Qabulxona
+        fields = '__all__'
+
+
+class KorupsiyagaXabarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = KorupsiyagaXabar
         fields = '__all__'
 

@@ -75,3 +75,10 @@ class Qabulxona(models.Model):
     email = models.EmailField(max_length=255, blank=True)
     mavzu = models.TextField(blank=True)
     xabar = models.TextField(blank=True)
+
+class KorupsiyagaXabar(models.Model):
+    fish = models.CharField(max_length=255, blank=True)
+    telefon_nomer = models.CharField(max_length=255, blank=True)
+    email = models.EmailField(max_length=255, blank=True)
+    mavzu = models.TextField(blank=True)
+    xabar = models.TextField(blank=True)
