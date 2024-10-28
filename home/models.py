@@ -26,6 +26,7 @@ class Yangilik(models.Model):
     sana = models.CharField(max_length=500, blank=True)
 
 
+
 class Elon(models.Model):
     rasm = models.ImageField(upload_to='elon/', blank=True)     
     fayl_1 = models.FileField(upload_to='elon_fayl/', blank=True)   
