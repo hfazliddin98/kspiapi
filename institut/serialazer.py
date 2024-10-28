@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import InstitutHaqida, InstitutMalumotlari, Kengash, Tuzilma, InstitutRekviziti, BankRekviziti, Qabulxona
-from .models import KorupsiyagaXabar
+from .models import KorupsiyagaXabar, PrizdentFarmonlari, Qonunlar, VazirlarMahkamasiQarorlari, IchkiMeyoriyHujatlar
 
 
 class InstitutHaqidaSerializer(serializers.ModelSerializer):
@@ -45,5 +45,29 @@ class QabulxonaSerializer(serializers.ModelSerializer):
 class KorupsiyagaXabarSerializer(serializers.ModelSerializer):
     class Meta:
         model = KorupsiyagaXabar
+        fields = '__all__'
+
+
+class PrizdentFarmonlariSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PrizdentFarmonlari
+        fields = '__all__'
+
+
+class QonunlarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Qonunlar
+        fields = '__all__'
+
+
+class VazirlarMahkamasiQarorlariSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VazirlarMahkamasiQarorlari
+        fields = '__all__'
+
+
+class IchkiMeyoriyHujatlarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IchkiMeyoriyHujatlar
         fields = '__all__'
 

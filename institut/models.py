@@ -82,3 +82,31 @@ class KorupsiyagaXabar(models.Model):
     email = models.EmailField(max_length=255, blank=True)
     mavzu = models.TextField(blank=True)
     xabar = models.TextField(blank=True)
+
+
+class PrizdentFarmonlari(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')
+
+
+class Qonunlar(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')
+
+
+class VazirlarMahkamasiQarorlari(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')
+
+
+class IchkiMeyoriyHujatlar(models.Model):
+    name_uz = models.CharField(max_length=255, blank=True)
+    name_ru = models.CharField(max_length=255, blank=True)
+    name_en = models.CharField(max_length=255, blank=True)
+    fayl = models.FileField(upload_to='mormtiv_hujatlar')
