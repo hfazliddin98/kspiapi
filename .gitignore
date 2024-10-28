@@ -44,6 +44,7 @@ coverage.xml
 .pytest_cache/
 cover/
 muhit/
+db.sqlite3
 
 # Translations
 *.mo
