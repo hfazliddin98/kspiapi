@@ -21,7 +21,8 @@ class Yangilik(models.Model):
     subtitle_en  = models.CharField(max_length=500, blank=True)
     body_uz = models.TextField(blank=True)
     body_ru = models.TextField(blank=True)
-    body_en = models.TextField(blank=True)    
+    body_en = models.TextField(blank=True) 
+    xalqaro = models.BooleanField(default=False)   
     sana = models.CharField(max_length=500, blank=True)
 
 
@@ -46,6 +47,7 @@ class Elon(models.Model):
     adress_uz  = models.CharField(max_length=500, blank=True)
     adress_ru  = models.CharField(max_length=500, blank=True)
     adress_en  = models.CharField(max_length=500, blank=True)
+    xalqaro = models.BooleanField(default=False)
     sana = models.DateTimeField(auto_now_add=True)
 
 
