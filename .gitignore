@@ -44,6 +44,7 @@ coverage.xml
 .pytest_cache/
 cover/
 muhit/
+migrations/
 db.sqlite3
 
 # Translations
