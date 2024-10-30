@@ -1,6 +1,6 @@
 from rest_framework import serializers 
 from .models import Jamoatchilik, Madaniy, Oquv, Akademik, Ilmiy, Yoshlar, NormativHujatlar, IchkiIdoraviyHujatlar, XabarBerish
-from .models import XalqaroProfesorlarFikri
+from .models import XalqaroProfesorlarFikri, XalqaroHamkorlar
 
 
 class JamoatchilikSerializer(serializers.ModelSerializer):
@@ -65,6 +65,12 @@ class XabarBerishSerializer(serializers.ModelSerializer):
 class XalqaroProfesorlarFikriSerializer(serializers.ModelSerializer):
     class Meta:
         model = XalqaroProfesorlarFikri
+        fields = '__all__'
+
+
+class XalqaroHamkorlarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = XalqaroHamkorlar
         fields = '__all__'
         
 
